@@ -1,74 +1,125 @@
 <?php
+App::uses('AppController', 'Controller');
+/**
+ * Posts Controller
+ *
+ * @property Post $Post
+ * @property PaginatorComponent $Paginator
+ */
 class PostsController extends AppController {
-        public $helpers = array('Html', 'Form');
-
-        public function index() {
-                $this->set('posts', $this->Post->find('all'));
-        }
-	
-	public function view($id = null) {
-		if(!$id) {
-			throw new NotFoundException(__('Invalid post'));
-		}
-
-		$post = $this->Post->findById($id);
-		if(!$post) {
-			throw new NotFoundException(__('Invalid post'));
-		}
-		$this->set('post', $post);
+/**
+ * Components
+ *
+ * @var array
+ */
+	public $components = array('Paginator','Flash','Search.Prg');
+	public $presetVars = array(
+			array('field' => 'title', 'type' => 'value'),
+			array('field' => 'categoryname', 'type' => 'like'),			
+			);
+/**
+ * index method
+ *
+ * @return void
+ */
+	public function index() {
+		//不要な関係データを取り除く（０、belongsToしているモデルだけ残すように）
+	//	$this->Post->recursive = 0; 	
+		$this->Prg->commonProcess();
+                $this->paginate =array('conditions' => $this->Post->parseCriteria($this->passedArgs),);
+		$this->set('posts', $this->Paginator->paginate());
 	}
-	
+/**
+ * view method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function view($id = null) {
+		if (!$this->Post->exists($id)) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
+		$this->set('post', $this->Post->find('first', $options));
+	}
+
+/**
+ * add method
+ *
+ * @return void
+ */
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
-				$this->Flash->success(__('Your post has bean saved.'));
+				$this->Flash->success(__('The post has been saved.'));
 				return $this->redirect(array('action' => 'index'));
-			}	
-		$this->Flach->error(__('Unable to add your post.'));
-		}
-	}
-	
-	public function edit($id = null) {
-		if (!$id) {
-		throw new NotFoundException(__('Invalid post'));
-		}
-
-		$post = $this->Post->findById($id);
-		if (!$post) {
-			throw new NotFoundException(__('Invalid post'));
-		}
-
-		if ($this->request->is(array('post', 'put'))) {
-			$this->Post->id = $id;
-			if ($this->Post->save($this->request->data)) {
-				$this->Flash->success(__('Your post has been updated.'));
-				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('The post could not be saved. Please, try again.'));
 			}
-			$this->Flash->error(__('Unable to update your post.'));
 		}
-
-		if (!$this->request->data) {
-			$this->request->data = $post;
-		}
-	}
-
-	public function delete($id) {
-		if ($this->request->is('get')) {
-			throw new MethodNotAllowedException();
-		}
-
-		if ($this->Post->delete($id)) {
-			$this->Flash->success(
-			__('The post with id: %s has been deleted.', h($id))
-			);
-		} else {
-			$this->Flash->error(
-			__('The post with id: %s could not be deleted.', h($id))
-			);
-		}
-
-		return $this->redirect(array('action' => 'index'));
-	}	
+		$users = $this->Post->User->find('list');
+		$this->set(compact('users'));
+		//categoriesテーブルから種別テーブルリストを取得する
+		$this->set('list',$this->Post->Category->find('list',array('fields'=>array('id','name'))));
+		//tagsを取得する	
+		$this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','name'))));
 }
 
+/**
+ * edit method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function edit($id = null) {
+		if (!$this->Post->exists($id)) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		if ($this->request->is(array('post', 'put'))) {
+			if ($this->Post->save($this->request->data)) {
+				$this->Flash->success(__('The post has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('The post could not be saved. Please, try again.'));
+			}
+		} else {
+			$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
+			$this->request->data = $this->Post->find('first', $options);
+		}
+		$users = $this->Post->User->find('list');
+		$this->set(compact('users'));
+	}
+
+/**
+ * delete method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function delete($id = null) {
+		$this->Post->id = $id;
+		if (!$this->Post->exists()) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		$this->request->allowMethod('post', 'delete');
+		if ($this->Post->delete()) {
+			$this->Flash->success(__('The post has been deleted.'));
+		} else {
+			$this->Flash->error(__('The post could not be deleted. Please, try again.'));
+		}
+		return $this->redirect(array('action' => 'index'));
+	}
+
+	public function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('index', 'view');
+	}
+
+	public function search(){
+	}
+
+}

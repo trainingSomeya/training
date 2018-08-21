@@ -1,13 +1,397 @@
-2018-08-08 15:26:09 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-10 14:59:04 Error: Fatal Error (64): Cannot redeclare User::$belongsTo in [/var/www/blog/app/Model/User.php, line 84]
+2018-08-10 14:59:04 Error: [FatalErrorException] Cannot redeclare User::$belongsTo
+Request URL: /users/login
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/var/www/blog/a...', 84)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/var/www/blog/a...', 84, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/var/www/blog/a...', 84, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 14:59:11 Error: Fatal Error (64): Cannot redeclare User::$belongsTo in [/var/www/blog/app/Model/User.php, line 84]
+2018-08-10 14:59:11 Error: [FatalErrorException] Cannot redeclare User::$belongsTo
+Request URL: /users/login
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/var/www/blog/a...', 84)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/var/www/blog/a...', 84, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/var/www/blog/a...', 84, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:02:28 Error: [MissingControllerException] Controller class UserController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'UserController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /user
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 15:34:33 Error: [MissingControllerException] Controller class IndexController could not be found.
+2018-08-10 15:03:14 Error: Fatal Error (1): Call to a member function success() on null in [/var/www/blog/app/Controller/GroupsController.php, line 52]
+2018-08-10 15:03:14 Error: [FatalErrorException] Call to a member function success() on null
+Request URL: /groups/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 52, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 52, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:05:24 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /user
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-10 15:06:05 Error: Fatal Error (1): Call to a member function success() on null in [/var/www/blog/app/Controller/UsersController.php, line 52]
+2018-08-10 15:06:05 Error: [FatalErrorException] Call to a member function success() on null
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 52, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 52, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:07:08 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test1' for key 'username'
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/UsersController.php(51): Model->save(Array)
+#6 [internal function]: UsersController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-10 15:07:15 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test1' for key 'username'
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/UsersController.php(51): Model->save(Array)
+#6 [internal function]: UsersController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-10 15:21:29 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:21:29 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:21:32 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:21:32 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:21:37 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:21:37 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:21:39 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:21:39 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:22:17 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:22:17 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:22:36 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:22:36 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:14 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:14 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:18 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:18 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:33 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:33 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:34 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:34 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:34 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:34 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:40 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /user
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-10 15:24:40 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:40 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:40 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:40 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/login
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:41 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:41 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/login
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:54 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:54 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/login
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:54 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:54 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:55 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:55 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:55 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /user
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-10 15:24:55 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:55 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:24:55 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:24:55 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/login
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:25:53 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:25:53 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:27:13 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:27:13 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:27:17 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:27:17 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:27:18 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:27:18 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:27:19 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:27:19 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:30:25 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:30:25 Error: [FatalErrorException] Cannot access empty property
+Request URL: /groups/view/6
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 15:37:34 Error: [NotFoundException] Invalid group
+Request URL: /groups/view/6
+Stack Trace:
+#0 [internal function]: GroupsController->view('6')
+#1 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#2 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#4 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-08-10 15:37:42 Error: [NotFoundException] Invalid group
+Request URL: /groups/view/6
+Stack Trace:
+#0 [internal function]: GroupsController->view('6')
+#1 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#2 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#4 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-08-10 15:38:27 Error: Fatal Error (1): Cannot access empty property in [/var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php, line 63]
+2018-08-10 15:38:27 Error: [FatalErrorException] Cannot access empty property
+Request URL: /users
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Cannot access e...', '/var/www/blog/l...', 63)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', '/var/www/blog/l...', 63, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 16:10:42 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /user
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-10 16:10:44 Error: [MissingControllerException] Controller class IndexController could not be found.
 Exception Attributes: array (
   'class' => 'IndexController',
   'plugin' => NULL,
@@ -16,135 +400,344 @@ Request URL: /index
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 15:34:42 Error: [MissingControllerException] Controller class IndexController could not be found.
+2018-08-10 16:11:05 Error: [MissingControllerException] Controller class InitdbController could not be found.
 Exception Attributes: array (
-  'class' => 'IndexController',
+  'class' => 'InitdbController',
   'plugin' => NULL,
 )
-Request URL: /index
+Request URL: /initdb
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 15:34:45 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-10 16:29:29 Error: [MissingControllerException] Controller class InitdbController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'InitdbController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /initdb
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 15:34:48 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-10 16:31:59 Error: Fatal Error (1): Call to a member function success() on null in [/var/www/blog/app/Controller/PostsController.php, line 52]
+2018-08-10 16:31:59 Error: [FatalErrorException] Call to a member function success() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 52, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 52, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-10 17:02:28 Error: [MissingControllerException] Controller class LoginController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'LoginController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /login
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 15:34:57 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-10 17:02:34 Error: [MissingControllerException] Controller class LoginController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'LoginController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /login
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:06 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-10 17:05:56 Error: [MissingControllerException] Controller class LoginController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'LoginController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /login
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:10 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-10 17:05:59 Error: [MissingControllerException] Controller class LoginController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'LoginController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /login
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:11 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-10 17:37:47 Error: [MissingControllerException] Controller class LoginController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'LoginController',
   'plugin' => NULL,
 )
-Request URL: /posts/
+Request URL: /login
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:14 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-10 17:37:54 Error: [MissingControllerException] Controller class LoginController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'LoginController',
   'plugin' => NULL,
 )
-Request URL: /posts/
+Request URL: /login
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:17 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-15 11:23:05 Error: [MissingControllerException] Controller class TagController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'TagController',
   'plugin' => NULL,
 )
-Request URL: /posts/
+Request URL: /tag
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:17 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-15 11:23:52 Error: [MissingControllerException] Controller class TagController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'TagController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /tag
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:41 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-15 11:34:22 Error: [NotFoundException] Invalid user
+Request URL: /users/view
+Stack Trace:
+#0 [internal function]: UsersController->view()
+#1 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-08-15 11:45:51 Error: [NotFoundException] Invalid user
+Request URL: /users/view
+Stack Trace:
+#0 [internal function]: UsersController->view()
+#1 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-08-15 11:45:52 Error: [MissingActionException] Action UsersController::vi() could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'controller' => 'UsersController',
+  'action' => 'vi',
+)
+Request URL: /users/vi
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-15 11:46:19 Error: [MissingControllerException] Controller class InitdbController could not be found.
+Exception Attributes: array (
+  'class' => 'InitdbController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /initdb
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:43 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-15 11:46:25 Error: [MissingControllerException] Controller class UserController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'UserController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /user
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:44 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-15 11:47:26 Error: [MissingControllerException] Controller class UserController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'UserController',
   'plugin' => NULL,
 )
-Request URL: /posts/
+Request URL: /user
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:04:46 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-08-15 11:58:30 Error: [MissingControllerException] Controller class UserController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'UserController',
   'plugin' => NULL,
 )
-Request URL: /posts/index
+Request URL: /user
 Stack Trace:
 #0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-08-08 16:08:20 Error: Fatal Error (4): syntax error, unexpected 'posts' (T_STRING), expecting ')' in [/var/www/blog/app/View/Posts/index.ctp, line 18]
-2018-08-08 16:08:20 Error: [FatalErrorException] syntax error, unexpected 'posts' (T_STRING), expecting ')'
-Request URL: /posts/index
+2018-08-15 11:58:35 Error: [MissingControllerException] Controller class TagController could not be found.
+Exception Attributes: array (
+  'class' => 'TagController',
+  'plugin' => NULL,
+)
+Request URL: /tag
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-15 13:28:21 Error: [MissingActionException] Action UsersController::loginv() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginv',
+)
+Request URL: /users/loginv
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-15 15:43:46 Error: Fatal Error (4): syntax error, unexpected 'find' (T_STRING), expecting variable (T_VARIABLE) in [/var/www/blog/app/Controller/PostsController.php, line 121]
+2018-08-15 15:43:46 Error: [FatalErrorException] syntax error, unexpected 'find' (T_STRING), expecting variable (T_VARIABLE)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 121)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 121, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 121, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-15 15:44:28 Error: Fatal Error (64): Cannot redeclare Post::$belongsTo in [/var/www/blog/app/Model/Post.php, line 57]
+2018-08-15 15:44:28 Error: [FatalErrorException] Cannot redeclare Post::$belongsTo
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/var/www/blog/a...', 57)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/var/www/blog/a...', 57, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/var/www/blog/a...', 57, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-15 15:46:18 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in [/var/www/blog/app/View/Posts/index.ctp, line 4]
+2018-08-15 15:46:18 Error: [FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';'
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 4, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 4, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-15 15:47:05 Error: Fatal Error (1): Call to a member function label() on null in [/var/www/blog/app/View/Posts/index.ctp, line 8]
+2018-08-15 15:47:05 Error: [FatalErrorException] Call to a member function label() on null
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 8, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 8, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-15 16:31:58 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /posts/delete/4
+Stack Trace:
+#0 /var/www/blog/app/Controller/PostsController.php(104): CakeRequest->allowMethod('post', 'delete')
+#1 [internal function]: PostsController->delete('4')
+#2 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#3 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#5 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-08-15 16:38:43 Error: [MissingActionException] Action PostsController::find() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'find',
+)
+Request URL: /posts/find
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-15 16:40:34 Error: [MissingActionException] Action PostsController::find() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'find',
+)
+Request URL: /posts/find
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-15 16:41:34 Error: [MissingActionException] Action PostsController::find() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'find',
+)
+Request URL: /posts/find
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-08-15 17:24:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Post.category_id' in 'on clause'
+Request URL: /posts?title=sa
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('SELECT `Post`.`...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(675): DboSource->execute('SELECT `Post`.`...', Array, Array)
+#3 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1186): DboSource->fetchAll('SELECT `Post`.`...', false)
+#4 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#6 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#7 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#8 [internal function]: PostsController->index()
+#9 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#12 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-08-15 18:14:11 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 67]
+2018-08-15 18:14:11 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-15 18:16:54 Error: Fatal Error (1): Call to a member function index() on null in [/var/www/blog/app/Controller/PostsController.php, line 67]
+2018-08-15 18:16:54 Error: [FatalErrorException] Call to a member function index() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-15 18:17:00 Error: Fatal Error (1): Call to a member function index() on null in [/var/www/blog/app/Controller/PostsController.php, line 67]
+2018-08-15 18:17:00 Error: [FatalErrorException] Call to a member function index() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-15 18:21:24 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 67]
+2018-08-15 18:21:24 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-15 18:24:02 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 67]
+2018-08-15 18:24:02 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 67, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-15 18:46:37 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/blog/app/View/Posts/index.ctp, line 18]
+2018-08-15 18:46:37 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /posts
 Stack Trace:
 #0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 18)
 #1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 18, Array)
@@ -152,60 +745,1334 @@ Stack Trace:
 #3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
-2018-08-08 16:12:31 Error: [MissingActionException] Action PostsController::view() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'view',
-)
-Request URL: /posts/view/1
+2018-08-15 18:46:40 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/blog/app/View/Posts/index.ctp, line 18]
+2018-08-15 18:46:40 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /posts
 Stack Trace:
-#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2018-08-08 16:12:43 Error: [MissingActionException] Action PostsController::view() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'view',
-)
-Request URL: /posts/view/2
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:07:24 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:07:24 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
 Stack Trace:
-#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2018-08-08 16:45:01 Error: [MissingActionException] Action PostsController::view() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'view',
-)
-Request URL: /posts/view/1
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:08:19 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:08:19 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
 Stack Trace:
-#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2018-08-08 16:45:35 Error: [MissingViewException] View file "Posts/view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts/view.ctp',
-)
-Request URL: /posts/view/1
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:08:21 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:08:21 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
 Stack Trace:
-#0 /var/www/blog/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
-#1 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
-#2 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:28:24 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:28:24 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:29:18 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:29:18 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:29:20 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:29:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:29:59 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:29:59 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:30:19 Error: Fatal Error (1): Call to a member function contain() on array in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:30:19 Error: [FatalErrorException] Call to a member function contain() on array
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:32:21 Error: Fatal Error (4): syntax error, unexpected ')' in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:32:21 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:33:03 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:33:03 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:34:10 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:34:10 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:42:56 Error: Fatal Error (4): syntax error, unexpected '}', expecting ']' in [/var/www/blog/app/Controller/PostsController.php, line 78]
+2018-08-16 14:42:56 Error: [FatalErrorException] syntax error, unexpected '}', expecting ']'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 78)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 78, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 78, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 14:44:28 Error: Fatal Error (1): Call to a member function lists() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 14:44:28 Error: [FatalErrorException] Call to a member function lists() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 15:02:57 Error: Fatal Error (1): Call to a member function lists() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 15:02:57 Error: [FatalErrorException] Call to a member function lists() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 15:03:08 Error: Fatal Error (1): Call to a member function lists() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 15:03:08 Error: [FatalErrorException] Call to a member function lists() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 15:32:20 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 15:32:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 15:32:52 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 15:32:52 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 15:34:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Post.name' in 'field list'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('SELECT `Post`.`...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(675): DboSource->execute('SELECT `Post`.`...', Array, Array)
+#3 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1186): DboSource->fetchAll('SELECT `Post`.`...', false)
+#4 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('tag', Array)
+#6 /var/www/blog/app/Controller/PostsController.php(69): Model->find('tag', Array)
+#7 [internal function]: PostsController->add()
+#8 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-08-16 16:32:05 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/View/Posts/index.ctp, line 38]
+2018-08-16 16:32:05 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 38, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 38, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 16:32:34 Error: [MissingHelperException] Helper class PostHelper could not be found.
+Exception Attributes: array (
+  'class' => 'PostHelper',
+  'plugin' => false,
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Post')
+#1 /var/www/blog/lib/Cake/View/View.php(858): HelperCollection->__isset('Post')
+#2 /var/www/blog/app/View/Posts/index.ctp(38): View->__get('Post')
+#3 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#4 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#5 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#6 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#7 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#9 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-08-16 16:49:25 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 16:49:25 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 16:52:22 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/Controller/PostsController.php, line 69]
+2018-08-16 16:52:22 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 69, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 17:59:17 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/var/www/blog/app/Model/Post.php, line 52]
+2018-08-16 17:59:17 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /posts?title=aaaa&category=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 52, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 52, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 18:14:17 Error: Fatal Error (4): syntax error, unexpected 'array' (T_ARRAY), expecting ')' in [/var/www/blog/app/Model/Post.php, line 12]
+2018-08-16 18:14:17 Error: [FatalErrorException] syntax error, unexpected 'array' (T_ARRAY), expecting ')'
+Request URL: /posts?title=aaaa&category=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 12, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 12, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-16 18:33:40 Error: [NotFoundException] Invalid post
+Request URL: /posts/delete/6
+Stack Trace:
+#0 [internal function]: PostsController->delete('6')
+#1 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #3 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #4 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-08-08 16:45:57 Error: [MissingViewException] View file "Posts/view.ctp" is missing.
+2018-08-21 11:16:13 Error: [MissingComponentException] Component class PrgComponent could not be found.
 Exception Attributes: array (
-  'file' => 'Posts/view.ctp',
+  'class' => 'PrgComponent',
+  'plugin' => 'Search',
 )
-Request URL: /posts/view/2
+Request URL: /posts
 Stack Trace:
-#0 /var/www/blog/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
-#1 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
-#2 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#0 /var/www/blog/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('Search.Prg', Array)
+#1 /var/www/blog/lib/Cake/Controller/Controller.php(644): ComponentCollection->init(Object(PostsController))
+#2 /var/www/blog/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
 #3 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #4 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2018-08-21 12:16:21 Error: Fatal Error (1): Call to a member function findById() on null in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:16:21 Error: [FatalErrorException] Call to a member function findById() on null
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:16:48 Error: Fatal Error (1): Call to a member function findById() on null in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:16:48 Error: [FatalErrorException] Call to a member function findById() on null
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:16:50 Error: Fatal Error (1): Call to a member function findById() on null in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:16:50 Error: [FatalErrorException] Call to a member function findById() on null
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:17:22 Error: Fatal Error (1): Call to a member function findById() on null in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:17:22 Error: [FatalErrorException] Call to a member function findById() on null
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:17:23 Error: Fatal Error (1): Call to a member function findById() on null in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:17:23 Error: [FatalErrorException] Call to a member function findById() on null
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:17:57 Error: Fatal Error (1): Call to a member function findById() on null in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:17:57 Error: [FatalErrorException] Call to a member function findById() on null
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:18:25 Error: Fatal Error (1): Call to a member function findById() on null in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:18:25 Error: [FatalErrorException] Call to a member function findById() on null
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:25:15 Error: Fatal Error (1): Call to a member function findById() on null in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:25:15 Error: [FatalErrorException] Call to a member function findById() on null
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:25:56 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:25:56 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:28:19 Error: Fatal Error (1): Call to a member function find() on array in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:28:19 Error: [FatalErrorException] Call to a member function find() on array
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:28:21 Error: Fatal Error (1): Call to a member function find() on array in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:28:21 Error: [FatalErrorException] Call to a member function find() on array
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:28:22 Error: Fatal Error (1): Call to a member function find() on array in [/var/www/blog/app/View/Posts/index.ctp, line 39]
+2018-08-21 12:28:22 Error: [FatalErrorException] Call to a member function find() on array
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/blog/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/blog/a...', 39, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 12:58:37 Error: [MissingHelperException] Helper class PostHelper could not be found.
+Exception Attributes: array (
+  'class' => 'PostHelper',
+  'plugin' => false,
+)
+Request URL: /posts?title=&categoryname=
+Stack Trace:
+#0 /var/www/blog/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Post')
+#1 /var/www/blog/lib/Cake/View/View.php(858): HelperCollection->__isset('Post')
+#2 /var/www/blog/app/View/Posts/index.ctp(39): View->__get('Post')
+#3 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#4 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#5 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#6 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#7 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#9 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-08-21 14:57:02 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 15:00:08 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:00:08 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:03:12 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 15:04:25 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 15:12:45 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:12:45 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:17:58 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:17:58 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:18:00 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:18:00 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:18:10 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:18:10 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:35:58 Error: [MissingHelperException] Helper class UploadHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UploadHelper',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/View/View.php(907): HelperCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/View/View.php(354): View->loadHelpers()
+#2 /var/www/blog/lib/Cake/Controller/Controller.php(1263): View->__construct(Object(PostsController))
+#3 /var/www/blog/lib/Cake/Controller/Controller.php(949): Controller->_getViewObject()
+#4 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#6 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-08-21 15:36:27 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:36:27 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:40:33 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:40:33 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:40:34 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:40:34 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:41:58 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:41:58 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:41:59 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:41:59 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:42:16 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 15:42:16 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 15:46:47 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 15:58:55 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 15:58:58 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 15:58:58 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 16:06:59 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 16:09:09 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 16:09:09 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 16:20:40 Error: Fatal Error (4): syntax error, unexpected 'require' (T_REQUIRE), expecting function (T_FUNCTION) in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 19]
+2018-08-21 16:20:40 Error: [FatalErrorException] syntax error, unexpected 'require' (T_REQUIRE), expecting function (T_FUNCTION)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 19, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 19, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 16:21:31 Error: Fatal Error (64): require() [<a href='http://php.net/function.require'>function.require</a>]: Failed opening required 'vendor/autoload.php' (include_path='/var/www/blog/lib:.:/usr/share/pear:/usr/share/php') in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 17]
+2018-08-21 16:21:31 Error: [FatalErrorException] require() [<a href='http://php.net/function.require'>function.require</a>]: Failed opening required 'vendor/autoload.php' (include_path='/var/www/blog/lib:.:/usr/share/pear:/usr/share/php')
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'require() [<a h...', '/var/www/blog/a...', 17)
+#1 [internal function]: ErrorHandler::handleError(64, 'require() [<a h...', '/var/www/blog/a...', 17, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'require() [<a h...', '/var/www/blog/a...', 17, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 16:22:22 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 16:22:22 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 16:22:44 Error: Fatal Error (64): require() [<a href='http://php.net/function.require'>function.require</a>]: Failed opening required 'Cake\ORM\Behavior' (include_path='/var/www/blog/lib:.:/usr/share/pear:/usr/share/php') in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 17]
+2018-08-21 16:22:44 Error: [FatalErrorException] require() [<a href='http://php.net/function.require'>function.require</a>]: Failed opening required 'Cake\ORM\Behavior' (include_path='/var/www/blog/lib:.:/usr/share/pear:/usr/share/php')
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'require() [<a h...', '/var/www/blog/a...', 17)
+#1 [internal function]: ErrorHandler::handleError(64, 'require() [<a h...', '/var/www/blog/a...', 17, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'require() [<a h...', '/var/www/blog/a...', 17, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 16:23:02 Error: Fatal Error (4): syntax error, unexpected 'require' (T_REQUIRE), expecting function (T_FUNCTION) in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 20]
+2018-08-21 16:23:02 Error: [FatalErrorException] syntax error, unexpected 'require' (T_REQUIRE), expecting function (T_FUNCTION)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 20)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 20, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 20, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 16:24:57 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-21 16:24:57 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-21 16:27:03 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 16:34:38 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 16:34:39 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /posts/delete/4
+Stack Trace:
+#0 /var/www/blog/app/Controller/PostsController.php(106): CakeRequest->allowMethod('post', 'delete')
+#1 [internal function]: PostsController->delete('4')
+#2 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#3 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#5 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-08-21 16:41:47 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(28): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-21 16:41:50 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(28): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-21 16:42:18 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(28): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-21 16:42:35 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(28): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-21 16:42:39 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(28): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-21 16:46:35 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(28): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-21 16:48:47 Error: [MissingBehaviorException] Behavior class UploadableBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadableBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Uploadab...', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Post', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Controller/Controller.php(742): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Controller/Controller.php(368): Controller->loadModel('Post')
+#6 /var/www/blog/lib/Cake/Controller/Controller.php(406): Controller->__isset('Post')
+#7 /var/www/blog/app/Controller/PostsController.php(27): Controller->__get('Post')
+#8 [internal function]: PostsController->index()
+#9 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#12 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-08-21 17:09:26 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:10:04 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:13:05 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:13:38 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:15:29 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:19:36 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:19:49 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:24:06 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:26:01 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:33:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Image.Image_id' in 'field list'
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('SELECT `Image`....', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(675): DboSource->execute('SELECT `Image`....', Array, Array)
+#3 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1524): DboSource->fetchAll('SELECT `Image`....', false)
+#4 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1358): DboSource->_fetchHasMany(Object(Post), 'SELECT `Image`....', Array)
+#5 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1217): DboSource->queryAssociation(Object(Post), Object(AppModel), 'hasMany', 'Image', Array, Array, true, Array, 0, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#8 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#9 /var/www/blog/app/Controller/PostsController.php(29): PaginatorComponent->paginate()
+#10 [internal function]: PostsController->index()
+#11 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#14 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2018-08-21 17:34:28 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(29): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-21 17:34:50 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(29): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-21 17:35:12 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-08-21 17:36:06 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(167): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(204): FormHelper->_getModel('Image')
+#8 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1346): FormHelper->_introspectModel('Image', 'fields', 'name')
+#9 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1182): FormHelper->_maxLength(Array)
+#10 /var/www/blog/lib/Cake/View/Helper/FormHelper.php(1055): FormHelper->_parseOptions(Array)
+#11 /var/www/blog/app/View/Posts/add.ctp(11): FormHelper->input('Image.0.name', Array)
+#12 /var/www/blog/lib/Cake/View/View.php(971): include('/var/www/blog/a...')
+#13 /var/www/blog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/blog/a...', Array)
+#14 /var/www/blog/lib/Cake/View/View.php(473): View->_render('/var/www/blog/a...')
+#15 /var/www/blog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#16 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#18 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2018-08-21 17:37:48 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'image_id' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Post), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/blog/app/Controller/PostsController.php(54): Model->save(Array)
+#6 [internal function]: PostsController->add()
+#7 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

@@ -70,13 +70,11 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'port' => '',
 		'login' => 'root',
 		'password' => 'nKwGZzgC',
 		'database' => 'BlogTest',
-		'schema' => '',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		'encoding' => 'utf8',
 	);
 
 	public $test = array(

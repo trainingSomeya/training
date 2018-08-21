@@ -1,46 +1,78 @@
-<!-- File: /app/View/Posts/index.ctp -->
+<div class="posts index">
+	<h2><?php echo __('Posts'); ?></h2>
+	
+	<!-- 検索フォームを作成 -->	
+	<?php echo $this->Form->create('Post', array(
+				'url' =>  array_merge(array('action' => 'index'),
+					$this->params['pass'])
+				));
+	echo $this->Form->label('title');
+	echo $this->Form->text('title');
+	echo $this->Form->label('categoryname');
+	echo $this->Form->text('categoryname');
+	echo $this->Form->submit(__('Search', true), array('div' => false));
+	echo $this->Form->end();?>
 
-<h1>Blog posts</h1>
-<?php echo $this->Html->link(
-	'Add Post',
-	array('controller' => 'posts', 'action' => 'add')
-); ?>
-
-<table>
+	<table cellpadding="0" cellspacing="0">
+	<thead>
 	<tr>
-		<th>Id</th>
-		<th>Title</th>
-		<th>Action</th>
-		<th>Created</th>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('category_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('title'); ?></th>
+			<th><?php echo $this->Paginator->sort('body'); ?></th>
+			<th><?php echo $this->Paginator->sort('tag'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
-
-<!-- ここから、$posts配列をループして、投稿記事の情報を表示 -->
-
+	</thead>
+	<tbody>
 	<?php foreach ($posts as $post): ?>
 	<tr>
-		<td><?php echo $post['Post']['id']; ?></td>
-		<td>
-		    <?php echo $this->Html->link($post['Post']['title'],
-		array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?>
+	<!-- チェック用 -->
+	<!--	<td><?php var_dump($post); ?>&nbsp;</td>	-->
+	<td><?php echo h($post['Post']['id']); ?>&nbsp;</td>
+	<td><?php echo h($post['Category']['name']); ?>&nbsp;</td>	
+	<td>
+	<?php echo $this->Html->link($post['User']['id'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?>
 		</td>
-		<td>
-		<?php
-			echo $this->Form->postLink(
-			'Delete',
-			array('action' => 'delete', $post['Post']['id']),
-			array('confirm' => 'Are you sure?')
-			);
-		?>
-		<?php
-			echo $this->Html->link(
-			'Edit',
-			array('action' => 'edit', $post['Post']['id'])
-			);
-		?>
+		<td><?php echo h($post['Post']['title']); ?>&nbsp;</td>
+		<td><?php echo h($post['Post']['body']); ?>&nbsp;</td>
+		<td><?php foreach ($post['Tag'] as $tag):
+		echo h($tag['name']."\n"); 
+		endforeach;
+		?>&nbsp;</td>
+		<td><?php echo h($post['Post']['created']); ?>&nbsp;</td>
+		<td><?php echo h($post['Post']['modified']); ?>&nbsp;</td>
+		<td class="actions">
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $post['Post']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $post['Post']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $post['Post']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $post['Post']['id']))); ?>
 		</td>
-		<td><?php echo $post['Post']['created']; ?></td>
 	</tr>
-	<?php endforeach; ?>
-	<?php unset($post); ?>
-</table>
-
+<?php endforeach; ?>
+	</tbody>
+	</table>
+	<p>
+	<?php
+	echo $this->Paginator->counter(array(
+		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	));
+	?>	</p>
+	<div class="paging">
+	<?php
+		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+	?>
+	</div>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('New Post'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+	</ul>
+</div>
