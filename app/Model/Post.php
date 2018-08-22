@@ -38,19 +38,12 @@ class Post extends AppModel {
 	public $hasAndBelongsToMany = array(
 			'Tag' => 
 			array(
-				'className'              => 'tag',
+				'className'              => 'Tag',
 				'joinTable'              => 'posts_tags',
 				'foreignKey'             => 'post_id',
 				'associationForeignKey'  => 'tag_id',
 				'unique'                 => true,
-				'conditions'             => '',
-				'fields'                 => '',
-				'order'                  => '',
-				'limit'                  => '',
-				'offset'                 => '',
-				'finderQuery'            => '',
-				'deleteQuery'            => '',
-				'insertQuery'            => ''
+				'with'            => 'PostsTag',
 			     )
 			);
 
@@ -58,7 +51,8 @@ class Post extends AppModel {
 	//検索パターンの設定
 	public $actsAs = array('Search.Searchable');
 	public $filterArgs = array('title' => array('type' => 'like'),
-			'categoryname' => array('type' => 'like'));
+			'categoryname' => array('type' => 'like','field' => 'Category.name'),
+			'tagname' => array('type' => 'subquery', 'method' => 'findByTags', 'field' => 'Post.id'),);
 	/**
  * Validation rules
  *
@@ -88,4 +82,17 @@ class Post extends AppModel {
 	);
 
 	// The Associations below have been created with all possible keys, those that are not needed can be removed
+
+	public function findByTags($data = array()) {
+		$this->PostsTag->Behaviors->attach('Containable', array('autoFields' => false));
+		$this->PostsTag->Behaviors->attach('Search.Searchable');
+		$query = $this->PostsTag->getQuery('all',array(
+					'conditions' => array(
+						'Tag.name' => $data['tagname']
+						),
+					'fields' => array('post_id'),
+					'contain' => array('Tag')
+					));
+		return $query;
+	}
 }

@@ -15,7 +15,8 @@ class PostsController extends AppController {
 	public $components = array('Paginator','Flash','Search.Prg');
 	public $presetVars = array(
 			array('field' => 'title', 'type' => 'value'),
-			array('field' => 'categoryname', 'type' => 'like'),			
+			array('field' => 'categoryname', 'type' => 'value'),			
+			array('field' => 'tagname', 'type' => 'value'),			
 			);
 /**
  * index method
@@ -64,7 +65,18 @@ class PostsController extends AppController {
 		//categoriesテーブルから種別テーブルリストを取得する
 		$this->set('list',$this->Post->Category->find('list',array('fields'=>array('id','name'))));
 		//tagsを取得する	
-		$this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','name'))));
+		$this->set('tag',$this->Post->Tag->find('list',array('fields'=>array('id','name')))); 
+		//JOINでの接続を試みた		
+		/*$tag = $this->Post->find('all',array(
+					'joins' => array(array(
+							'type' =>'LEFT',
+							'alias' => 'PostsTag',
+							'table' => 'posts_tags',
+							)),
+						'conditions' => 'PostTag.post_id = Post.id'
+					));	
+$this->set('tag',$tag);*/
+
 }
 
 /**

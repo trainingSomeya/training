@@ -8,8 +8,10 @@
 				));
 	echo $this->Form->label('title');
 	echo $this->Form->text('title');
-	echo $this->Form->label('categoryname');
+	echo $this->Form->label('Category');
 	echo $this->Form->text('categoryname');
+	echo $this->Form->label('tag');
+	echo $this->Form->text('tagname');
 	echo $this->Form->submit(__('Search', true), array('div' => false));
 	echo $this->Form->end();?>
 
