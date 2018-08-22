@@ -4,14 +4,9 @@
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('model'); ?></th>
-			<th><?php echo $this->Paginator->sort('foreign_key'); ?></th>
-			<th><?php echo $this->Paginator->sort('photo_user'); ?></th>
-			<th><?php echo $this->Paginator->sort('photo_menu'); ?></th>
-			<th><?php echo $this->Paginator->sort('dir'); ?></th>
-			<th><?php echo $this->Paginator->sort('type'); ?></th>
-			<th><?php echo $this->Paginator->sort('size'); ?></th>
-			<th><?php echo $this->Paginator->sort('active'); ?></th>
+			<th><?php echo $this->Paginator->sort('img_file_name'); ?></th>
+			<th><?php echo $this->Paginator->sort('title'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -19,14 +14,9 @@
 	<?php foreach ($images as $image): ?>
 	<tr>
 		<td><?php echo h($image['Image']['id']); ?>&nbsp;</td>
-		<td><?php echo h($image['Image']['model']); ?>&nbsp;</td>
-		<td><?php echo h($image['Image']['foreign_key']); ?>&nbsp;</td>
-		<td><?php echo h($image['Image']['photo_user']); ?>&nbsp;</td>
-		<td><?php echo h($image['Image']['photo_menu']); ?>&nbsp;</td>
-		<td><?php echo h($image['Image']['dir']); ?>&nbsp;</td>
-		<td><?php echo h($image['Image']['type']); ?>&nbsp;</td>
-		<td><?php echo h($image['Image']['size']); ?>&nbsp;</td>
-		<td><?php echo h($image['Image']['active']); ?>&nbsp;</td>
+		<td><?php echo h($image['Image']['img_file_name']); ?>&nbsp;</td>
+		<td><?php echo h($image['Image']['title']); ?>&nbsp;</td>
+		<td><?php echo h($image['Image']['created']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $image['Image']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $image['Image']['id'])); ?>
@@ -54,7 +44,5 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Image'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Posts'), array('controller' => 'posts', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

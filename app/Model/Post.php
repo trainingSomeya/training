@@ -24,15 +24,12 @@ class Post extends AppModel {
 	);
 
 	//hasMany associations
-	/*public $hasMany = array(
+	public $hasMany = array(
 			'Image' => array(
 				'className' => 'Image',
 				'foreignKey' => 'Image_id',
-				'conditions' => array(
-					'Image.model' => 'Post',
 					),
-				),
-			);*/
+			);
 
 	//belongToMany associations
 	public $hasAndBelongsToMany = array(

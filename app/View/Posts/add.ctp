@@ -7,9 +7,8 @@
 		echo $this->Form->input('user_id');
 		echo $this->Form->input('title');
 		echo $this->Form->input('body');
+		echo $this->Form->input('image',array('type' => 'file',));	
 		echo $this->Form->input('Tag',array('type'=>'select','options'=>$tag,'multiple' => true,'size' => 5));
-	/*	echo $this->Form->input('Image.0.name', array('type' => 'file'));
-		echo $this->Form->hidden('Image.0.model', array('value' => 'person'));*/
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

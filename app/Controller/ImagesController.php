@@ -1,5 +1,5 @@
 <?php
-App::uses('AppController', 'Controller');
+App::uses('AppController', 'Controller','Image');
 /**
  * Images Controller
  *
@@ -7,6 +7,7 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  */
 class ImagesController extends AppController {
+var $helpers = array('Form', 'UploadPack.Upload');
 
 /**
  * Components

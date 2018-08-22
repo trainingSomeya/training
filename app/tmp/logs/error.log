@@ -2846,3 +2846,317 @@ Stack Trace:
 #11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #12 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2018-08-22 17:55:32 Error: [MissingControllerException] Controller class InitdbController could not be found.
+Exception Attributes: array (
+  'class' => 'InitdbController',
+  'plugin' => NULL,
+)
+Request URL: /initdb
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-22 17:55:35 Error: [MissingControllerException] Controller class InitdbController could not be found.
+Exception Attributes: array (
+  'class' => 'InitdbController',
+  'plugin' => NULL,
+)
+Request URL: /initdb
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-22 17:55:50 Error: [MissingControllerException] Controller class InitdbController could not be found.
+Exception Attributes: array (
+  'class' => 'InitdbController',
+  'plugin' => NULL,
+)
+Request URL: /initdb
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-22 18:07:04 Error: Fatal Error (4): syntax error, unexpected ')', expecting variable (T_VARIABLE) in [/var/www/blog/app/Model/Post.php, line 33]
+2018-08-22 18:07:04 Error: [FatalErrorException] syntax error, unexpected ')', expecting variable (T_VARIABLE)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 33, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 33, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 18:20:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Image.Image_id' in 'field list'
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('SELECT `Image`....', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(675): DboSource->execute('SELECT `Image`....', Array, Array)
+#3 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1524): DboSource->fetchAll('SELECT `Image`....', false)
+#4 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1358): DboSource->_fetchHasMany(Object(Post), 'SELECT `Image`....', Array)
+#5 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1217): DboSource->queryAssociation(Object(Post), Object(Image), 'hasMany', 'Image', Array, Array, true, Array, 0, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#8 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#9 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#10 [internal function]: PostsController->index()
+#11 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#14 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2018-08-22 18:30:44 Error: [MissingPluginException] Plugin UploadPack could not be found.
+Exception Attributes: array (
+  'plugin' => 'UploadPack',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Core/App.php(227): CakePlugin::path('UploadPack')
+#1 /var/www/blog/lib/Cake/Core/App.php(549): App::path('Model/Behavior', 'UploadPack')
+#2 [internal function]: App::load('UploadBehavior')
+#3 [internal function]: spl_autoload_call('UploadBehavior')
+#4 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(120): class_exists('UploadBehavior')
+#5 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('UploadPack.Uplo...', Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#7 [internal function]: Model->__construct(Array)
+#8 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#10 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#11 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#12 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#13 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#14 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#15 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#16 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#17 [internal function]: PostsController->index()
+#18 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#19 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#20 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#21 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#22 {main}
+2018-08-22 18:32:41 Error: [MissingPluginException] Plugin UploadPack could not be found.
+Exception Attributes: array (
+  'plugin' => 'UploadPack',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Core/App.php(227): CakePlugin::path('UploadPack')
+#1 /var/www/blog/lib/Cake/Core/App.php(549): App::path('Model/Behavior', 'UploadPack')
+#2 [internal function]: App::load('UploadBehavior')
+#3 [internal function]: spl_autoload_call('UploadBehavior')
+#4 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(120): class_exists('UploadBehavior')
+#5 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('UploadPack.Uplo...', Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#7 [internal function]: Model->__construct(Array)
+#8 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#10 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#11 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#12 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#13 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#14 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#15 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#16 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#17 [internal function]: PostsController->index()
+#18 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#19 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#20 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#21 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#22 {main}
+2018-08-22 18:33:42 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-22 18:34:43 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-22 18:34:43 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 18:35:54 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-22 18:47:56 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-22 18:47:57 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-22 18:53:17 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-22 18:53:17 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 18:56:45 Error: Fatal Error (1): Undefined constant 'Upload\Model\Behavior' in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 2]
+2018-08-22 18:56:45 Error: [FatalErrorException] Undefined constant 'Upload\Model\Behavior'
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Undefined const...', '/var/www/blog/a...', 2)
+#1 [internal function]: ErrorHandler::handleError(1, 'Undefined const...', '/var/www/blog/a...', 2, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Undefined const...', '/var/www/blog/a...', 2, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 18:57:15 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-22 18:57:15 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 19:02:20 Error: Fatal Error (1): Class 'Cake\ORM\Behavior' not found in [/var/www/blog/app/Plugin/Upload/Model/Behavior/UploadBehavior.php, line 18]
+2018-08-22 19:02:20 Error: [FatalErrorException] Class 'Cake\ORM\Behavior' not found
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Cake\\ORM...', '/var/www/blog/a...', 18, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-22 19:04:54 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2018-08-22 19:05:21 Error: [MissingBehaviorException] Behavior class UploadBehavior could not be found.
+Exception Attributes: array (
+  'class' => 'UploadBehavior',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/BehaviorCollection.php(66): BehaviorCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/Model/Model.php(781): BehaviorCollection->init('Image', Array)
+#2 [internal function]: Model->__construct(Array)
+#3 /var/www/blog/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1084): ClassRegistry::init(Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(893): Model->_constructLinkedModel('Image', 'Image', NULL)
+#6 /var/www/blog/lib/Cake/Model/Model.php(926): Model->__isset('Image')
+#7 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1205): Model->__get('Image')
+#8 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(Post), Array)
+#9 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('all', Array)
+#10 /var/www/blog/lib/Cake/Controller/Component/PaginatorComponent.php(212): Model->find('all', Array)
+#11 /var/www/blog/app/Controller/PostsController.php(31): PaginatorComponent->paginate()
+#12 [internal function]: PostsController->index()
+#13 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#14 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}

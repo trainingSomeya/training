@@ -12,13 +12,7 @@ class ImagesControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.image',
-		'app.post',
-		'app.user',
-		'app.group',
-		'app.category',
-		'app.tag',
-		'app.posts_tag'
+		'app.image'
 	);
 
 /**
