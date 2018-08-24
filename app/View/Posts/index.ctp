@@ -33,7 +33,7 @@
 	<?php foreach ($posts as $post): ?>
 	<tr>
 	<!-- チェック用 -->
-	<!--	<td><?php var_dump($post); ?>&nbsp;</td>	-->
+	<!--	<td><?php var_dump($post); ?>&nbsp;</td> -->	
 	<td><?php echo h($post['Post']['id']); ?>&nbsp;</td>
 	<td><?php echo h($post['Category']['name']); ?>&nbsp;</td>	
 	<td>

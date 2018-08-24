@@ -69,6 +69,7 @@ Cache::config('default', array('engine' => 'File'));
 CakePlugin::load('AclExtras');
 CakePlugin::load('Search');
 CakePlugin::load('Upload');
+CakePlugin::load('TwitterBootstrap');
 /**
  * To prefer app translation over plugin translation, you can set
  *

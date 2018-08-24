@@ -31,6 +31,17 @@
 			<?php echo h($post['Post']['modified']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Image'); ?></dt>
+		<dd>
+		<?php
+		if($post['Image'][0]['filename']){		
+			$base = $this->Html->url('/files/image/filename/'); 
+			echo $this->Html->image($base.$post['Image'][0]['id'].'/'.$post['Image'][0]['filename']);
+		} 
+		?>&nbsp;
+		</dd>
+
+
 	</dl>
 </div>
 <div class="actions">

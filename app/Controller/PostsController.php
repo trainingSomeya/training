@@ -1,5 +1,5 @@
 <?php
-App::uses('AppController', 'Controller');
+App::uses('AppController', 'Controller','Image');
 /**
  * Posts Controller
  *
@@ -13,6 +13,9 @@ class PostsController extends AppController {
  * @var array
  */
 	public $components = array('Paginator','Flash','Search.Prg');
+//	public $helpers = array('Form','Upload.Upload');
+
+//検索の条件の指定 
 	public $presetVars = array(
 			array('field' => 'title', 'type' => 'value'),
 			array('field' => 'categoryname', 'type' => 'value'),			
@@ -51,15 +54,6 @@ class PostsController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
-			$this->Post->create();
-			if ($this->Post->save($this->request->data)) {
-				$this->Flash->success(__('The post has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Flash->error(__('The post could not be saved. Please, try again.'));
-			}
-		}
 		$users = $this->Post->User->find('list');
 		$this->set(compact('users'));
 		//categoriesテーブルから種別テーブルリストを取得する
@@ -75,9 +69,28 @@ class PostsController extends AppController {
 							)),
 						'conditions' => 'PostTag.post_id = Post.id'
 					));	
-$this->set('tag',$tag);*/
+					$this->set('tag',$tag);*/
+		
+		if ($this->request->is('post')) {
+			$this->Post->create();
+			if ($this->Post->saveall($this->request->data)) {
+				/*
+				ob_start();//チェック
+				var_dump($this->request->data);
+				$result = ob_get_contents();
+				ob_end_clean();
+				$fp = fopen("./upload/dump.txt", "a+" );
+				fputs($fp, $result);
+				fclose( $fp );//	
+				 */	
+				$this->Flash->success(__('The post has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('The post could not be saved. Please, try again.'));
+			}
+		}
 
-}
+	}
 
 /**
  * edit method

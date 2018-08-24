@@ -8,8 +8,15 @@ class Image extends AppModel {
 	var $actsAs = array(
 			'Upload.Upload' => array(
 				//画像保存用のフィールド名
-				'img' => array(
+				'filename' => array(
 					)
 				)
 			);
+
+	public $belongsTo = array(
+			'Post' => array(
+				'className' => 'Post',
+				'foreighKey' => 'post_id'
+				)
+			); 
 }

@@ -3160,3 +3160,546 @@ Stack Trace:
 #15 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #16 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #17 {main}
+2018-08-23 10:51:35 Error: Fatal Error (4): syntax error, unexpected '}', expecting ',' or ';' in [/var/www/blog/app/Model/Image.php, line 22]
+2018-08-23 10:51:35 Error: [FatalErrorException] syntax error, unexpected '}', expecting ',' or ';'
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 22, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 22, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 11:34:49 Error: [MissingHelperException] Helper class UploadHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UploadHelper',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/View/View.php(907): HelperCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/View/View.php(354): View->loadHelpers()
+#2 /var/www/blog/lib/Cake/Controller/Controller.php(1263): View->__construct(Object(PostsController))
+#3 /var/www/blog/lib/Cake/Controller/Controller.php(949): Controller->_getViewObject()
+#4 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#6 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-08-23 11:47:17 Error: [MissingHelperException] Helper class UploadHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UploadHelper',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/View/View.php(907): HelperCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/View/View.php(354): View->loadHelpers()
+#2 /var/www/blog/lib/Cake/Controller/Controller.php(1263): View->__construct(Object(PostsController))
+#3 /var/www/blog/lib/Cake/Controller/Controller.php(949): Controller->_getViewObject()
+#4 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#6 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-08-23 12:02:16 Error: [MissingHelperException] Helper class UploadHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UploadHelper',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/View/View.php(907): HelperCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/View/View.php(354): View->loadHelpers()
+#2 /var/www/blog/lib/Cake/Controller/Controller.php(1263): View->__construct(Object(PostsController))
+#3 /var/www/blog/lib/Cake/Controller/Controller.php(949): Controller->_getViewObject()
+#4 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#6 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-08-23 12:23:18 Error: [MissingHelperException] Helper class UploadHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UploadHelper',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/View/View.php(907): HelperCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/View/View.php(354): View->loadHelpers()
+#2 /var/www/blog/lib/Cake/Controller/Controller.php(1263): View->__construct(Object(PostsController))
+#3 /var/www/blog/lib/Cake/Controller/Controller.php(949): Controller->_getViewObject()
+#4 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#6 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-08-23 12:23:19 Error: [MissingHelperException] Helper class UploadHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UploadHelper',
+  'plugin' => 'Upload',
+)
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/View/View.php(907): HelperCollection->load('Upload.Upload', Array)
+#1 /var/www/blog/lib/Cake/View/View.php(354): View->loadHelpers()
+#2 /var/www/blog/lib/Cake/Controller/Controller.php(1263): View->__construct(Object(PostsController))
+#3 /var/www/blog/lib/Cake/Controller/Controller.php(949): Controller->_getViewObject()
+#4 /var/www/blog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#6 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-08-23 14:47:16 Error: Fatal Error (4): syntax error, unexpected '<', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/blog/app/Controller/PostsController.php, line 76]
+2018-08-23 14:47:16 Error: [FatalErrorException] syntax error, unexpected '<', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 76, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 76, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 14:50:21 Error: Fatal Error (4): syntax error, unexpected '<', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/blog/app/Controller/PostsController.php, line 76]
+2018-08-23 14:50:21 Error: [FatalErrorException] syntax error, unexpected '<', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /posts
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 76, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 76, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 14:56:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 14:57:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 14:57:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 15:02:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 15:04:41 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 15:05:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 15:05:53 Error: Model Image, Field img: Unable to move the uploaded file to /var/www/blog/app/app:webroot/upload/:model/:id/:basename_:style.:extention/3/03-yellow.png
+2018-08-23 15:05:53 Error: [UploadException] Unable to upload file
+Request URL: /posts/add
+Stack Trace:
+#0 [internal function]: UploadBehavior->afterSave(Object(Image), true, Array)
+#1 /var/www/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#2 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#3 /var/www/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#4 /var/www/blog/lib/Cake/Model/Model.php(1970): CakeEventManager->dispatch(Object(CakeEvent))
+#5 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#8 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#9 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#10 [internal function]: PostsController->add()
+#11 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#14 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2018-08-23 15:15:58 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/blog/app/Controller/PostsController.php, line 77]
+2018-08-23 15:15:58 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 77)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 77, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 77, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 15:16:20 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/blog/app/Controller/PostsController.php, line 77]
+2018-08-23 15:16:20 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 77)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 77, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 77, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 15:16:42 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/blog/app/Controller/PostsController.php, line 77]
+2018-08-23 15:16:42 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 77)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 77, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 77, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 16:17:42 Error: Fatal Error (4): syntax error, unexpected ',', expecting ')' in [/var/www/blog/app/View/Posts/add.ctp, line 10]
+2018-08-23 16:17:42 Error: [FatalErrorException] syntax error, unexpected ',', expecting ')'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 10, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 10, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-08-23 16:59:55 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'dir' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 17:18:45 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'filename' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 17:26:01 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'filename' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 17:31:46 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'filename' doesn't have a default value
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `Bl...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `Bl...')
+#3 /var/www/blog/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Image), Array, Array)
+#4 /var/www/blog/lib/Cake/Model/Model.php(1754): Model->_doSave(Array, Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(2352): Model->save(Array, Array)
+#6 /var/www/blog/lib/Cake/Model/Model.php(2572): Model->saveMany(Array, Array)
+#7 /var/www/blog/lib/Cake/Model/Model.php(2287): Model->saveAssociated(Array, Array)
+#8 /var/www/blog/app/Controller/PostsController.php(76): Model->saveAll(Array)
+#9 [internal function]: PostsController->add()
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-08-23 19:02:24 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:03:23 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:09:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:09:32 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:09:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:09:38 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:09:40 Error: [MissingControllerException] Controller class TagController could not be found.
+Exception Attributes: array (
+  'class' => 'TagController',
+  'plugin' => NULL,
+)
+Request URL: /tag
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:09:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:09:43 Error: [MissingControllerException] Controller class TagController could not be found.
+Exception Attributes: array (
+  'class' => 'TagController',
+  'plugin' => NULL,
+)
+Request URL: /tag
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:09:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:09:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:11:44 Error: [MissingControllerException] Controller class TagController could not be found.
+Exception Attributes: array (
+  'class' => 'TagController',
+  'plugin' => NULL,
+)
+Request URL: /tag
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:11:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:11:58 Error: [MissingControllerException] Controller class PostsController could not be found.
+Exception Attributes: array (
+  'class' => 'PostsController',
+  'plugin' => 'TwitterBootstrap',
+)
+Request URL: /twitter_bootstrap/posts/add
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:11:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap-responsive.min.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:12:13 Error: [MissingControllerException] Controller class PostsController could not be found.
+Exception Attributes: array (
+  'class' => 'PostsController',
+  'plugin' => 'TwitterBootstrap',
+)
+Request URL: /twitter_bootstrap/posts/add
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:12:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap-responsive.min.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:12:15 Error: [MissingControllerException] Controller class PostsController could not be found.
+Exception Attributes: array (
+  'class' => 'PostsController',
+  'plugin' => 'TwitterBootstrap',
+)
+Request URL: /twitter_bootstrap/posts/add
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:12:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/bootstrap-responsive.min.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:12:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:12:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-08-23 19:13:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/cake.generic.css
+Stack Trace:
+#0 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

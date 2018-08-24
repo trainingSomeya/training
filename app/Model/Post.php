@@ -27,8 +27,8 @@ class Post extends AppModel {
 	public $hasMany = array(
 			'Image' => array(
 				'className' => 'Image',
-				'foreignKey' => 'Image_id',
-					),
+				'foreignKey' => 'post_id'
+				),
 			);
 
 	//belongToMany associations
