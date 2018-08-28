@@ -1,35 +1,35 @@
-<nav class="navbar navbar-default ">
 <div class="container">	
-<!-- ヘッダー部分 -->
+<!-- ヘッダー部分  ナビゲーションバー　-->
+<nav class="navbar navbar-default navbar-fixed-top">
 <div class="navbar-header">
-<div class="actions">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample1">
-<span class="sr-only">Toggle navigation</span>
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarAction">
+<span class="sr-only">Action navigation</span><!-- 音声ブラウザ用 -->
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-<a class="navbar-brand" href="#">ACTION</a>
 </div>
-
-<div class="collapse navbar-collapse" id="navbarEexample1">
+<div class="collapse navbar-collapse" id="navbarAction">
 <ul class="nav navbar-nav">
 <li><a href="#"><?php echo $this->Html->link(__('New Post'), array('action' => 'add')); ?></a></li>
 <li class="active"><a href="#"><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?></a></li>
 <li><a href="#"><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?></a></li>
 </ul>
 </div>
-</div>
-</div>
 </nav>
 
+<!-- 各ブログの内容表示とインフォメーション　-->
+<div class="row">
 <div class="posts index">
-<h1><?php echo __('Posts'); ?></h1>
+<h1>
+<?php echo __('Posts'); ?>
+</h1>
+
 <!-- 検索フォームを作成 -->	
 <?php echo $this->Form->create('Post', array(
-			'url' =>  array_merge(array('action' => 'index'),
-				$this->params['pass']),
-			));
+	'url' =>  array_merge(array('action' => 'index'),
+	$this->params['pass']),
+));
 echo $this->Form->label('title');
 echo $this->Form->text('title');
 echo $this->Form->label('Category');
@@ -38,59 +38,58 @@ echo $this->Form->label('tag');
 echo $this->Form->text('tagname');
 echo $this->Form->submit(__('Search', true), array('div' => false));
 echo $this->Form->end();?>
-<table  cellpadding="0" cellspacing="0">
-<thead>
-<tr>
-<th><?php echo $this->Paginator->sort('id'); ?></th>
-<th><?php echo $this->Paginator->sort('category_id'); ?></th>
-<th><?php echo $this->Paginator->sort('user_id'); ?></th>
-<th><?php echo $this->Paginator->sort('title'); ?></th>
-<th><?php echo $this->Paginator->sort('body'); ?></th>
-<th><?php echo $this->Paginator->sort('tag'); ?></th>
-<th><?php echo $this->Paginator->sort('created'); ?></th>
-<th><?php echo $this->Paginator->sort('modified'); ?></th>
-<th class="actions"><?php echo __('Actions'); ?></th>
-</tr>
-</thead>
-<tbody>
+</div>
+
+<div class="row">
+<!-- 各ブログの内容表示 -->
+<div class="col-md-8">
 <?php foreach ($posts as $post): ?>
-<tr>
-<!-- チェック用 -->
-<!--	<td><?php var_dump($post); ?>&nbsp;</td> -->	
-<td><?php echo h($post['Post']['id']); ?>&nbsp;</td>
-<td><?php echo h($post['Category']['name']); ?>&nbsp;</td>	
-<td>
-<?php echo $this->Html->link($post['User']['id'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?>
-</td>
-<td><?php echo h($post['Post']['title']); ?>&nbsp;</td>
-<td><?php echo h($post['Post']['body']); ?>&nbsp;</td>
-<td><?php foreach ($post['Tag'] as $tag):
-echo h($tag['name']."\n"); 
-endforeach;
-?>&nbsp;</td>
-<td><?php echo h($post['Post']['created']); ?>&nbsp;</td>
-<td><?php echo h($post['Post']['modified']); ?>&nbsp;</td>
-<td class="actions">
-<?php echo $this->Html->link(__('View'), array('action' => 'view', $post['Post']['id'])); ?>
-<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $post['Post']['id'])); ?>
-<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $post['Post']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $post['Post']['id']))); ?>
-</td>
-</tr>
-<?php endforeach; ?>
-</tbody>
-</table>
+<!-- タイトル部分 -->
+<h2><?php echo h($post['Post']['title']); ?>&nbsp;<br>
+<small style="font-size: small;"><?php echo h("Category: ".$post['Category']['name']); ?>&nbsp;
+<?php echo $this->Html->link("UserID: ".$post['User']['id'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?>
+<?php echo h("Created: ".$post['Post']['created']); ?>&nbsp;
+<?php echo h("Modified: ".$post['Post']['modified']); ?>&nbsp;</small></h2>
+<!-- 本文とタグとアクション --> 
+<p class="lead"><?php echo h($post['Post']['body']); ?>&nbsp;</p>
 <p>
+<?php 
+echo h("Tag: ");
+foreach ($post['Tag'] as $tag):
+	echo h($tag['name']."\n"); 
+endforeach;
+?>&nbsp;</p>
+	<p class="actions">
+	<?php echo h("Actions: "); ?>
+<div class="btn-group" role="group">
+<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('View'), array('action' => 'view', $post['Post']['id'])); ?></button>
+<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $post['Post']['id'])); ?> 
+<button type="button" class="btn btn-default"><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $post['Post']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $post['Post']['id']))); ?></button>
+	</p>
+</div>
+	<?php endforeach; ?>
+
+	<!-- ページ数の表示 -->
+	<p>
 <?php
 echo $this->Paginator->counter(array(
-			'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-			));
+	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+));
 ?>	</p>
-<div class="paging">
-<?php
-echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-echo $this->Paginator->numbers(array('separator' => ''));
-echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-?>
-</div>
-</div>
-</div>
+	<div class="paging">
+<button class="btn btn-default"><?php echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled')); ?></button>
+<?php echo $this->Paginator->numbers(array('separator' => '')); ?>
+<button class="btn btn-default"><?php echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));?></button>
+	</div>
+	</div>
+<!-- インフォメーション -->
+	<div class="col-md-2">
+	<div class="well">
+	<h3><?php echo __('About'); ?></h3>
+	<p><?php echo __('Bootstrapの練習のためのブログぺージ'); ?></p>
+	</div>
+	</div>
+
+	</div>
+	</div>
+	</div>

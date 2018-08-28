@@ -14,12 +14,23 @@
 
 <!-- Le styles -->
 <style>
+h1 {
+font-size:9ex;
+font-weight:normal;
+}
 body {
-	padding-top: 50px;
+	padding-top: 100px;
 }
 .starter-template {
 padding: 40px 15px;
 	 text-align: center;
+}
+.footer{
+	border-top: 1px solid black;
+}
+.footer > .container{
+padding-bottom: 30px;
+padding-top: 30px;
 }
 </style>
 
@@ -31,7 +42,7 @@ padding: 40px 15px;
 <![endif]-->
 </head>
 <body>
-
+<a name="TOP"></a>
 <?php echo $this->Session->flash(); ?>
 
 <?php echo $this->fetch('content'); ?>
@@ -41,5 +52,12 @@ padding: 40px 15px;
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <?php echo $this->Html->script('bootstrap.min'); ?>
 <?php echo $this->fetch('script'); ?>
+<!-- フッダー部分 -->
+<footer class="footer" style="text-align:center">
+<div class="container">
+<p>Built for <a href="http://getbootstrap.com">Bootstrap</a>	</p>
+<a href="#TOP">Back to Top</a>
+</div>
+</footer>
 </body>
 </html>
