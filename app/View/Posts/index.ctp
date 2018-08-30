@@ -1,4 +1,5 @@
-<script type="text/javascript" src=""></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/postsearch.js"></script>
 <div class="container">	
 	<!-- ヘッダー部分  ナビゲーションバー　-->
 	<nav class="navbar navbar-custom navbar-fixed-top">
@@ -19,14 +20,14 @@
 					<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?></li>
 					<li><?php echo $this->Html->link(__('JQ Test'), array('controller' => 'jqtest', 'action' => 'index')); ?></li>
 				</ul>
-				<button type="button" class="btn btn-default navbar-btn navbar-right" id="Search">Search</button>
+				<button type="button" class="btn btn-default navbar-btn navbar-right" id="search">Search</button>
 		</div>
 	</div>
 </nav>
 
 <!-- 各ブログの内容表示とインフォメーション　-->
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-12" id="title">
 		<div class="box">
 			<h1>
 				<?php echo __('Posts'); ?><br>
@@ -35,20 +36,22 @@
 	</div>
 	<!-- 検索フォームを作成 -->	
 	<div class="col-md-12">
-		<div class="box">
-			<div class="posts index">
-				<?php echo $this->Form->create('Post', array(
-				'url' =>  array_merge(array('action' => 'index'),
-				$this->params['pass']),
-				));
-				echo $this->Form->label('title');
-				echo $this->Form->text('title');
-				echo $this->Form->label('Category');
-				echo $this->Form->text('categoryname');
-				echo $this->Form->label('tag');
-				echo $this->Form->text('tagname');
-				echo $this->Form->submit(__('Search', true), array('div' => false));
-				echo $this->Form->end();?>
+		<div class="search">
+			<div class="box">
+				<div class="posts index">
+					<?php echo $this->Form->create('Post', array(
+					'url' =>  array_merge(array('action' => 'index'),
+					$this->params['pass']),
+					));
+					echo $this->Form->label('title');
+					echo $this->Form->text('title');
+					echo $this->Form->label('Category');
+					echo $this->Form->text('categoryname');
+					echo $this->Form->label('tag');
+					echo $this->Form->text('tagname');
+					echo $this->Form->submit(__('Search', true), array('div' => false));
+					echo $this->Form->end();?>
+				</div>
 			</div>
 		</div>
 	</div>

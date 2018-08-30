@@ -25,6 +25,27 @@ body {
 p {
 	font-size: 16px;
 }
+/* 画像のスライドショーのための設定*/ 
+.img{
+	padding: 2px 0 2px 0;
+}
+.largeImg{
+	display:none;
+}
+#back-curtain{
+background: rgba(0, 0, 0, 0.5);
+display: none;
+position: absolute;
+left: 0;
+top:0;
+}
+#buttonR{
+	display:none;
+}
+#buttonL{
+	display:none;
+}
+
 .square_btn{
 	width:160px;
 	font-size:20px;
@@ -37,6 +58,9 @@ p {
 	background-color:#ffffff;
 	border:1px solid #333;
 	border-radius:25px;
+}
+.search{
+	display:none;
 }
 /* グリットシステムの確認、調整*/
 .box{

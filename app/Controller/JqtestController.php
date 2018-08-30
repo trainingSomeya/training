@@ -14,7 +14,6 @@ class JqtestController extends AppController {
  * @return void
  */
 	public function index() {
-		echo'<html><body><h1>Hello!</h1></body></html>';
 	}
 	public function beforeFilter() {
 		    parent::beforeFilter();
