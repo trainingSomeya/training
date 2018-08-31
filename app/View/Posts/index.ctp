@@ -21,69 +21,69 @@
 					<li><?php echo $this->Html->link(__('JQ Test'), array('controller' => 'jqtest', 'action' => 'index')); ?></li>
 				</ul>
 				<button type="button" class="btn btn-default navbar-btn navbar-right" id="search">Search</button>
+			</div>
 		</div>
-	</div>
-</nav>
+	</nav>
 
-<!-- 各ブログの内容表示とインフォメーション　-->
-<div class="row">
-	<div class="col-md-12" id="title">
-		<div class="box">
-			<h1>
-				<?php echo __('Posts'); ?><br>
-			</h1>
-		</div>
-	</div>
-	<!-- 検索フォームを作成 -->	
-	<div class="col-md-12">
-		<div class="search">
+	<!-- 各ブログの内容表示とインフォメーション　-->
+	<div class="row">
+		<div class="col-md-12" id="title">
 			<div class="box">
-				<div class="posts index">
-					<?php echo $this->Form->create('Post', array(
-					'url' =>  array_merge(array('action' => 'index'),
-					$this->params['pass']),
-					));
-					echo $this->Form->label('title');
-					echo $this->Form->text('title');
-					echo $this->Form->label('Category');
-					echo $this->Form->text('categoryname');
-					echo $this->Form->label('tag');
-					echo $this->Form->text('tagname');
-					echo $this->Form->submit(__('Search', true), array('div' => false));
-					echo $this->Form->end();?>
+				<h1>
+					<?php echo __('Posts'); ?><br>
+				</h1>
+			</div>
+		</div>
+		<!-- 検索フォームを作成 -->	
+		<div class="col-md-12">
+			<div class="search">
+				<div class="box">
+					<div class="posts index">
+						<?php echo $this->Form->create('Post', array(
+						'url' =>  array_merge(array('action' => 'index'),
+						$this->params['pass']),
+						));
+						echo $this->Form->label('title');
+						echo $this->Form->text('title');
+						echo $this->Form->label('Category');
+						echo $this->Form->text('categoryname');
+						echo $this->Form->label('tag');
+						echo $this->Form->text('tagname');
+						echo $this->Form->submit(__('Search', true), array('div' => false));
+						echo $this->Form->end();?>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="row">
-		<!-- 各ブログの内容表示 -->
-		<div class="col-md-8">
-			<?php foreach ($posts as $post): ?>
-			<div class="box">
-				<!-- タイトル部分 -->
-				<h2><?php echo h($post['Post']['title']); ?>&nbsp;<br>
-					<small style="font-size: medium;"><?php echo h("Category: ".$post['Category']['name']); ?>&nbsp;
-						<?php echo $this->Html->link("UserID: ".$post['User']['id'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?><br>
-						<?php echo h("Created: ".$post['Post']['created']); ?>&nbsp;
-						<?php echo h("Modified: ".$post['Post']['modified']); ?>&nbsp;</small></h2>
-				<!-- 本文とタグとアクション --> 
-				<p><?php echo h($post['Post']['body']); ?></p>
-				<p>
-				<?php 
-				echo h("Tag: ");
-				foreach ($post['Tag'] as $tag):
-				echo h($tag['name']."\n"); 
-				endforeach;
-				?>&nbsp;</p>
-				<p class="actions">
-				<?php echo h("Actions: "); ?>
-				<div class="btn-group" role="group">
-					<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('View'), array('action' => 'view', $post['Post']['id'])); ?></button>
-					<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $post['Post']['id'])); ?> 
+		<div class="row">
+			<!-- 各ブログの内容表示 -->
+			<div class="col-md-8">
+				<?php foreach ($posts as $post): ?>
+				<div class="box">
+					<!-- タイトル部分 -->
+					<h2><?php echo h($post['Post']['title']); ?>&nbsp;<br>
+						<small style="font-size: medium;"><?php echo h("Category: ".$post['Category']['name']); ?>&nbsp;
+							<?php echo $this->Html->link("UserID: ".$post['User']['id'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?><br>
+							<?php echo h("Created: ".$post['Post']['created']); ?>&nbsp;
+							<?php echo h("Modified: ".$post['Post']['modified']); ?>&nbsp;</small></h2>
+					<!-- 本文とタグとアクション --> 
+					<p><?php echo h($post['Post']['body']); ?></p>
+					<p>
+					<?php 
+					echo h("Tag: ");
+					foreach ($post['Tag'] as $tag):
+					echo h($tag['name']."\n"); 
+					endforeach;
+					?>&nbsp;</p>
+					<p class="actions">
+					<?php echo h("Actions: "); ?>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('View'), array('action' => 'view', $post['Post']['id'])); ?></button>
+						<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $post['Post']['id'])); ?></button> 
 						<button type="button" class="btn btn-default"><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $post['Post']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $post['Post']['id']))); ?></button>
-						</p>
 					</div>
+					</p>
 				</div>
 				<?php endforeach; ?>
 
@@ -98,11 +98,8 @@
 				</div>
 				<div class ="box">
 					<div class="btn-toolbar" role="toolbar">
-						<div class="paging">
 							<button class="btn square_btn" role="group"><?php echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled')); ?></button>
-							<?php echo $this->Paginator->numbers(array('separator' => '')); ?>
 							<button class="btn square_btn" role="group"><?php echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));?></button>
-						</div>
 					</div>
 				</div>
 			</div>
