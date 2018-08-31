@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/addressSearch.js"></script>
 <div class="container">
 	<!-- ヘッダー部分  ナビゲーションバー　-->
 	<nav class="navbar navbar-custom navbar-fixed-top">
@@ -32,7 +34,14 @@
 			echo $this->Form->input('username');
 			echo $this->Form->input('password');
 			echo $this->Form->input('group_id');
-			?>
+?>
+<!-- 郵便番号入力のテキストボックス -->
+<input type="text" id="zipcode" value="" maxlength="7">
+<input type="button" id="search_btn" value="検索">
+<p>※7桁の半角数字で入力してください</p>
+<!-- 検索結果の表示エリア -->
+<div id="zip_result"></div>
+<?php echo $this->Form->input('address');?>
 		</fieldset>
 		<?php echo $this->Form->end(__('Submit')); ?>
 	</div>
