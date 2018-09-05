@@ -57,7 +57,7 @@ class UsersController extends AppController {
 		}
 		$groups = $this->User->Group->find('list');
 		$this->set(compact('groups'));
-	}
+			}
 
 /**
  * edit method
@@ -152,4 +152,7 @@ class UsersController extends AppController {
 		exit;
 	}
 
+	public function search(){
+
+	}
 }

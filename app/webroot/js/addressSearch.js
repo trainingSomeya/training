@@ -4,7 +4,7 @@ $(function () {
 		//入力値をセット
 		var param = {zipcode: $('#zipcode').val()}
 		//zipcloudのAPIのURL
-		var send_url = "http://zipcloud.ibsnet.co.jp/api/search";
+		var send_url = "/users/search";
 		$.ajax({
 			type: "GET",
 			cache: false,
@@ -25,9 +25,6 @@ $(function () {
 						html += '<div>都道府県：' + result.address1 + '</div>';
 						html += '<div>市区町村：' + result.address2 + '</div>';
 						html += '<div>町域：' + result.address3 + '</div>';
-						html += '<div>都道府県(カナ)：' + result.kana1 + '</div>';
-						html += '<div>市区町村(カナ)：' + result.kana1 + '</div>';
-						html += '<div>町域(カナ)：' + result.kana1 + '</div>';
 					}
 					$('#zip_result').html(html);
 				} else {
