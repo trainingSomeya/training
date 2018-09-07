@@ -9,7 +9,7 @@ App::uses('AuthComponent', 'Controller/Component');
  */
 class User extends AppModel {
 
-	public $belongsTo = array('Group');
+	public $belongsTo = array('Group','PostalCode');
 	public $actsAs = array('Acl' => array('type' => 'requester','enabled' => false));
 
 	public function parentNode() {

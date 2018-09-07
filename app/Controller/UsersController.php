@@ -13,7 +13,7 @@ class UsersController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator','Flash');
+	public $components = array('Paginator','Flash','Search.Prg');
 
 /**
  * index method
@@ -118,6 +118,17 @@ class UsersController extends AppController {
 			$this->Session->setFlash(__('Your username or password was incorrect.'));
 		}
 	}
+	public function search(){
+		$this->autoRender = false;
+		if($this->request->is('ajax')) {
+			$zipcode = "0.".$this->request->data('zipcode');
+			$options = array('conditions'=>array('zipcode'=>$zipcode));
+			if($result = $this->User->PostalCode->find('all',$options)){
+				return json_encode($result);
+			}
+			return json_encode($zipcode);   
+		}
+	}
 
 	public function logout() {
 		$this->Session->setFlash('Good-Bye');
@@ -127,6 +138,7 @@ class UsersController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow('initDB');
+		$this->Auth->allow('search');
 	}
 	public function initDB() {
 		$group = $this->User->Group;
@@ -152,15 +164,5 @@ class UsersController extends AppController {
 		exit;
 	}
 
-	public function search(){
-		//$zipcode = $this->request->data['zipcode'];
-		//$options = array('conditions'=>array('zipcode'=>$zipcode));
-		//if($result = $this->PostalCode->find('all',$options)){
-		//	$this->set(compact('result'));
-		//}
-		$this->autoRender = false;
-		if($this->request->is('ajax')) {
-			return $this->data['name']."さん、こんにちは";   
-		}
-	}
+
 }
