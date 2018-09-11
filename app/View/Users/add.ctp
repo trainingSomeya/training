@@ -36,12 +36,11 @@
 			echo $this->Form->input('group_id');
 			?>
 			<!-- 郵便番号入力のテキストボックス -->
-			<input type="text" id="zipcode" value="" maxlength="7">
+			<input type="text" id="zipcode" value="" maxlength="7" title="郵便番号検索">
 			<input type="button" id="search_btn" value="検索">
 			<p>※7桁の半角数字で入力</p>
 			<!-- 検索結果の表示エリア -->
-			<div id="zip_result"></div>
-			<?php echo $this->Form->input('address');?>
+			<?php echo $this->Form->input('address',array("id"=>"zip_result")); ?>
 		</fieldset>
 		<?php echo $this->Form->end(__('Submit')); ?>
 	</div>

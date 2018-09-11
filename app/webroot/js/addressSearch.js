@@ -8,16 +8,15 @@ $(function () {
 			type: "post",
 			data: param,
 			url: send_url,
-		//	dataType: "json",
+			dataType: "json",
 			success: function (res) {
 				//該当する住所を表示
 				var html = '';
-				html +=  res['id'];
-				html +=  res.state;
-				html +=  res.city;
-				html +=  res.street;
-				$('#zip_result').html(html);
-				alert(res);
+				html +=  res[0].PostalCode.state;
+				html +=  res[0].PostalCode.city;
+				html +=  res[0].PostalCode.street;
+				$('#zip_result').val(html);
+			//	alert(JSON.stringify(res));
 
 			},
 			error: function (res, status, errors) {
