@@ -126,7 +126,7 @@ class UsersController extends AppController {
 			if($result = $this->User->PostalCode->find('all',$options)){
 				return json_encode($result);
 			}
-			return json_encode($zipcode);   
+			return json_encode(null);   
 		}
 	}
 
