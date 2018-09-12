@@ -28,15 +28,15 @@
 
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
-	<fieldset>
+	<form>
 		<legend><?php echo __('Edit User'); ?></legend>
-<?php
-echo $this->Form->input('id');
-echo $this->Form->input('username');
-echo $this->Form->input('password');
-echo $this->Form->input('group_id');
-?>
-	</fieldset>
+
+ <div class="form-group"><?php echo $this->Form->input('id'); ?></div>
+ <div class="form-group"><?php echo $this->Form->input('username'); ?></div>
+ <div class="form-group"><?php echo $this->Form->input('password'); ?></div>
+ <div class="form-group"><?php echo $this->Form->input('group_id'); ?></div>
+
+	</form>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
 </div>

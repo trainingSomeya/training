@@ -26,8 +26,16 @@
 		</div>
 	</nav>
 
+<div class="row">
+                <div class="col-md-12" id="title">
+                        <div class="box">
+                                <h1>
+                                        <?php echo __('Group'); ?><br>
+                                </h1>
+                        </div>
+                </div>
+</div>
 	<div class="groups view">
-		<h2><?php echo __('Group'); ?></h2>
 		<dl>
 			<dt><?php echo __('Id'); ?></dt>
 			<dd>
@@ -84,10 +92,5 @@
 		</table>
 		<?php endif; ?>
 
-		<div class="actions">
-			<ul>
-				<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-			</ul>
-		</div>
-	</div>
+			</div>
 </div>

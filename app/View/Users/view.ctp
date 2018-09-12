@@ -30,8 +30,17 @@
 		</div>
 	</nav>
 
+
+<div class="row">
+                <div class="col-md-12" id="title">
+                        <div class="box">
+                                <h1>
+                                        <?php echo __('User'); ?><br>
+                                </h1>
+                        </div>
+                </div>
+</div>
 	<div class="users view">
-		<h2><?php echo __('User'); ?></h2>
 		<dl>
 			<dt><?php echo __('Id'); ?></dt>
 			<dd>
@@ -97,10 +106,5 @@
 		</table>
 		<?php endif; ?>
 
-		<div class="actions">
-			<ul>
-				<li><?php echo $this->Html->link(__('New Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
-			</ul>
-		</div>
-	</div>
+			</div>
 </div>

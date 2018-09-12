@@ -21,8 +21,17 @@
 		</div>
 	</nav>
 
+<div class="row">
+                <div class="col-md-12" id="title">
+                        <div class="box">
+                                <h1>
+                                        <?php echo __('Groups'); ?><br>
+                                </h1>
+                        </div>
+                </div>
+</div>
+
 	<div class="groups index">
-		<h2><?php echo __('Groups'); ?></h2>
 		<table class="table" cellpadding="0" cellspacing="0">
 			<thead>
 				<tr>

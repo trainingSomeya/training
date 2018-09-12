@@ -39,80 +39,91 @@
 			<div class="search">
 				<div class="box">
 					<div class="posts index">
-						<?php echo $this->Form->create('Post', array(
-						'url' =>  array_merge(array('action' => 'index'),
-						$this->params['pass']),
-						));
-						echo $this->Form->label('title');
-						echo $this->Form->text('title');
-						echo $this->Form->label('Category');
-						echo $this->Form->text('categoryname');
-						echo $this->Form->label('tag');
-						echo $this->Form->text('tagname');
-						echo $this->Form->submit(__('Search', true), array('div' => false));
-						echo $this->Form->end();?>
+						<div class="well well-sm"> 
+							<div = class="form-inline">
+								<?php echo $this->Form->create('Post', array(
+								'url' =>  array_merge(array('action' => 'index'),
+								$this->params['pass']),
+								)); ?>
+								<div class="form-group">
+									<?php echo $this->Form->label('title'); ?>
+									<?php echo $this->Form->text('title'); ?>
+								</div>
+								<div class="form-group">
+									<?php echo $this->Form->label('Category'); ?>
+									<?php echo $this->Form->text('categoryname'); ?>
+								</div>
+								<div class="form-group">
+									<?php echo $this->Form->label('tag'); ?>
+									<?php echo $this->Form->text('tagname'); ?>
+								</div>
+								<div class="form-group">			
+									<?php echo $this->Form->submit(__('Search', true), array('div' => false)); ?>
+								</div>
+								<?php echo $this->Form->end();?>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="row">
-			<!-- 各ブログの内容表示 -->
-			<div class="col-md-8">
-				<?php foreach ($posts as $post): ?>
-				<div class="box">
-					<!-- タイトル部分 -->
-					<h2><?php echo h($post['Post']['title']); ?>&nbsp;<br>
-						<small style="font-size: medium;"><?php echo h("Category: ".$post['Category']['name']); ?>&nbsp;
-							<?php echo $this->Html->link("UserID: ".$post['User']['id'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?><br>
-							<?php echo h("Created: ".$post['Post']['created']); ?>&nbsp;
-							<?php echo h("Modified: ".$post['Post']['modified']); ?>&nbsp;</small></h2>
-					<!-- 本文とタグとアクション --> 
-					<p><?php echo h($post['Post']['body']); ?></p>
-					<p>
-					<?php 
-					echo h("Tag: ");
-					foreach ($post['Tag'] as $tag):
-					echo h($tag['name']."\n"); 
-					endforeach;
-					?>&nbsp;</p>
-					<p class="actions">
-					<?php echo h("Actions: "); ?>
-					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('View'), array('action' => 'view', $post['Post']['id'])); ?></button>
-						<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $post['Post']['id'])); ?></button> 
-						<button type="button" class="btn btn-default"><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $post['Post']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $post['Post']['id']))); ?></button>
+			<div class="row">
+				<!-- 各ブログの内容表示 -->
+				<div class="col-md-8">
+					<?php foreach ($posts as $post): ?>
+					<div class="box">
+						<!-- タイトル部分 -->
+						<h2><?php echo h($post['Post']['title']); ?>&nbsp;<br>
+							<small style="font-size: medium;"><?php echo h("Category: ".$post['Category']['name']); ?>&nbsp;
+								<?php echo $this->Html->link("UserID: ".$post['User']['id'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?><br>
+								<?php echo h("Created: ".$post['Post']['created']); ?>&nbsp;
+								<?php echo h("Modified: ".$post['Post']['modified']); ?>&nbsp;</small></h2>
+						<!-- 本文とタグとアクション --> 
+						<p><?php echo h($post['Post']['body']); ?></p>
+						<p>
+						<?php 
+						echo h("Tag: ");
+						foreach ($post['Tag'] as $tag):
+						echo h($tag['name']."\n"); 
+						endforeach;
+						?>&nbsp;</p>
+						<p class="actions">
+						<?php echo h("Actions: "); ?>
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('View'), array('action' => 'view', $post['Post']['id'])); ?></button>
+							<button type="button" class="btn btn-default"><?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $post['Post']['id'])); ?></button> 
+							<button type="button" class="btn btn-default"><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $post['Post']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $post['Post']['id']))); ?></button>
+						</div>
+						</p>
 					</div>
-					</p>
-				</div>
-				<?php endforeach; ?>
+					<?php endforeach; ?>
 
-				<!-- ページ数の表示 -->
-				<div class ="box">
-					<p>
-					<?php
-					echo $this->Paginator->counter(array(
-					'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-					));
-					?>	</p>
-				</div>
-				<div class ="box">
-					<div class="btn-toolbar" role="toolbar">
+					<!-- ページ数の表示 -->
+					<div class ="box">
+						<p>
+						<?php
+						echo $this->Paginator->counter(array(
+						'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+						));
+						?>	</p>
+					</div>
+					<div class ="box">
+						<div class="btn-toolbar" role="toolbar">
 							<button class="btn square_btn" role="group"><?php echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled')); ?></button>
 							<button class="btn square_btn" role="group"><?php echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));?></button>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- インフォメーション -->
-			<div class="col-md-4">
-				<div class="box">
-					<div class="well">
-						<h3><?php echo __('About'); ?></h3>
-						<p><?php echo __('Bootstrapの練習のためのブログぺージ'); ?></p>
+				<!-- インフォメーション -->
+				<div class="col-md-4">
+					<div class="box">
+						<div class="well">
+							<h3><?php echo __('About'); ?></h3>
+							<p><?php echo __('Bootstrapの練習のためのブログぺージ'); ?></p>
+						</div>
 					</div>
 				</div>
-			</div>
 
+			</div>
 		</div>
 	</div>
-</div>

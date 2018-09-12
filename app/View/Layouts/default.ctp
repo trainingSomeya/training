@@ -16,7 +16,11 @@
 		<style>
 <!--
 h1 {
-	font-size:9ex;
+	font-size:64px;
+	font-weight:normal;
+}
+h2 {
+	font-size:40px;
 	font-weight:normal;
 }
 body {
@@ -24,6 +28,24 @@ body {
 }
 p {
 	font-size: 16px;
+}
+th {
+	font-size:20px;
+}
+td {
+	font-size: 16px;
+}
+dt {
+	font-size: 24px;
+}
+dd {
+	font-size:16px;
+}
+legend {
+font-size:64px;
+}
+.form-group{
+font-size: 24px
 }
 /* 画像のスライドショーのための設定*/ 
 .img{
@@ -33,11 +55,11 @@ p {
 	display:none;
 }
 #back-curtain{
-background: rgba(0, 0, 0, 0.5);
-display: none;
-position: absolute;
-left: 0;
-top:0;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	position: absolute;
+	left: 0;
+	top:0;
 }
 #buttonR{
 	display:none;

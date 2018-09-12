@@ -24,13 +24,11 @@
 
 	<div class="groups form">
 		<?php echo $this->Form->create('Group'); ?>
-		<fieldset>
+		<form>
 			<legend><?php echo __('Edit Group'); ?></legend>
-			<?php
-			echo $this->Form->input('id');
-			echo $this->Form->input('name');
-			?>
-		</fieldset>
-		<?php echo $this->Form->end(__('Submit')); ?>
+			<div class="form-group"><?php echo $this->Form->input('id'); ?></div>
+			<div class="form-group"><?php echo $this->Form->input('name'); ?></div>
+			<div class="form-group"><?php echo $this->Form->end(__('Submit')); ?></div>
+		</form>
 	</div>
 </div>
