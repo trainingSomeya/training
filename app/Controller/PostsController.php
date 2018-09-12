@@ -20,15 +20,16 @@ class PostsController extends AppController {
 			array('field' => 'title', 'type' => 'value'),
 			array('field' => 'categoryname', 'type' => 'value'),			
 			array('field' => 'tagname', 'type' => 'value'),			
-			);
+		);
 /**
  * index method
  *
  * @return void
  */
 	public function index() {
-		//不要な関係データを取り除く（０、belongsToしているモデルだけ残すように）
-	//	$this->Post->recursive = 0; 	
+		//categoriesテーブルから種別テーブルリストを取得する
+		$this->set('list',$this->Post->Category->find('list',array('fields'=>array('name'))));
+	//	$this->Post->recursive = 0; 	//不要な関係データを取り除く（０、belongsToしているモデルだけ残すように）
 		$this->Prg->commonProcess();
                 $this->paginate =array('conditions' => $this->Post->parseCriteria($this->passedArgs),);
 		$this->set('posts', $this->Paginator->paginate());

@@ -45,8 +45,9 @@ legend {
 font-size:64px;
 }
 .form-group{
-font-size: 24px
+font-size: 18px
 }
+
 /* 画像のスライドショーのための設定*/ 
 .img{
 	padding: 2px 0 2px 0;

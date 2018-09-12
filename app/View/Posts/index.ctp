@@ -40,7 +40,7 @@
 				<div class="box">
 					<div class="posts index">
 						<div class="well well-sm"> 
-							<div = class="form-inline">
+							<div class="form-inline">
 								<?php echo $this->Form->create('Post', array(
 								'url' =>  array_merge(array('action' => 'index'),
 								$this->params['pass']),
@@ -50,8 +50,10 @@
 									<?php echo $this->Form->text('title'); ?>
 								</div>
 								<div class="form-group">
+							<!--		<?php echo $this->Form->input('categoryname',array('type'=>'select','options'=>$list,'label'=>'Category')); ?>
+									<?php print var_export($list,true); ?> -->
 									<?php echo $this->Form->label('Category'); ?>
-									<?php echo $this->Form->text('categoryname'); ?>
+									<?php echo $this->Form->text('categoryname'); ?> 
 								</div>
 								<div class="form-group">
 									<?php echo $this->Form->label('tag'); ?>
