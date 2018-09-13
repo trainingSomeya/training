@@ -28,8 +28,10 @@ class PostsController extends AppController {
  */
 	public function index() {
 		//categoriesテーブルから種別テーブルリストを取得する
-		$this->set('list',$this->Post->Category->find('list',array('fields'=>array('name'))));
-	//	$this->Post->recursive = 0; 	//不要な関係データを取り除く（０、belongsToしているモデルだけ残すように）
+		$this->set('list',$this->Post->Category->find('list',array('fields'=>array('name','name'))));
+		//tagsテーブルから種別テーブルリストを取得する
+		$this->set('tags',$this->Post->Tag->find('list',array('fields'=>array('name','name'))));
+		//	$this->Post->recursive = 0; 	//不要な関係データを取り除く（０、belongsToしているモデルだけ残すように）
 		$this->Prg->commonProcess();
                 $this->paginate =array('conditions' => $this->Post->parseCriteria($this->passedArgs),);
 		$this->set('posts', $this->Paginator->paginate());
@@ -55,8 +57,7 @@ class PostsController extends AppController {
  * @return void
  */
 	public function add() {
-		$users = $this->Post->User->find('list');
-		$this->set(compact('users'));
+		$this->set('users',$this->Post->User->find('list',array('fields'=>array('id','username'))));
 		//categoriesテーブルから種別テーブルリストを取得する
 		$this->set('list',$this->Post->Category->find('list',array('fields'=>array('id','name'))));
 		//tagsを取得する	
@@ -101,6 +102,7 @@ class PostsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->set('user',$this->Post->User->find('list',array('fields'=>array('id','username'))));
 		if (!$this->Post->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}

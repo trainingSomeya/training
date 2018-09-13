@@ -4719,3 +4719,317 @@ Stack Trace:
 #1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2018-09-13 10:50:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.name' in 'field list'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(675): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/blog/lib/Cake/Model/Datasource/DboSource.php(1186): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/blog/lib/Cake/Model/Model.php(3040): DboSource->read(Object(User), Array)
+#5 /var/www/blog/lib/Cake/Model/Model.php(3012): Model->_readDataSource('list', Array)
+#6 /var/www/blog/app/Controller/PostsController.php(58): Model->find('list', Array)
+#7 [internal function]: PostsController->add()
+#8 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#9 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#11 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-09-13 11:26:30 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/blog/app/View/Posts/add.ctp, line 34]
+2018-09-13 11:26:30 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 34, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 34, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 12:43:52 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/blog/app/View/Posts/add.ctp, line 34]
+2018-09-13 12:43:52 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 34, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 34, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 12:49:30 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/blog/app/View/Posts/add.ctp, line 33]
+2018-09-13 12:49:30 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 33, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 33, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 13:01:51 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/var/www/blog/app/View/Posts/add.ctp, line 35]
+2018-09-13 13:01:51 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 35, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 35, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 13:15:34 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/var/www/blog/app/View/Posts/add.ctp, line 29]
+2018-09-13 13:15:34 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 29, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 29, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 13:16:13 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/var/www/blog/app/View/Posts/add.ctp, line 29]
+2018-09-13 13:16:13 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 29, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 29, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 13:16:30 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/var/www/blog/app/View/Posts/add.ctp, line 29]
+2018-09-13 13:16:30 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 29, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 29, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 13:18:15 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/var/www/blog/app/View/Posts/add.ctp, line 29]
+2018-09-13 13:18:15 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 29, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 29, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 13:35:56 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/var/www/blog/app/View/Posts/add.ctp, line 28]
+2018-09-13 13:35:56 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 28, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 28, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 13:48:19 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/blog/app/View/Posts/add.ctp, line 30]
+2018-09-13 13:48:19 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /posts/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 30)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 30, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 30, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 13:54:22 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/var/www/blog/app/View/Users/add.ctp, line 30]
+2018-09-13 13:54:22 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /users/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/blog/a...', 30)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/blog/a...', 30, Array)
+#2 /var/www/blog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/blog/a...', 30, Array)
+#3 /var/www/blog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2018-09-13 14:17:12 Error: [MissingActionException] Action JqtestController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'JqtestController',
+  'action' => 'add',
+)
+Request URL: /jqtest/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(JqtestController), Object(CakeRequest))
+#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-09-13 14:17:19 Error: [MissingActionException] Action JqtestController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'JqtestController',
+  'action' => 'add',
+)
+Request URL: /jqtest/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(JqtestController), Object(CakeRequest))
+#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-09-13 17:46:54 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 1
+)
+"
+Request URL: /users/
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Permission.php(80): AclNode->node(Array)
+#1 /var/www/blog/lib/Cake/Controller/Component/Acl/DbAcl.php(73): Permission->check(Array, 'controllers/Use...', '*')
+#2 /var/www/blog/lib/Cake/Controller/Component/AclComponent.php(110): DbAcl->check(Array, 'controllers/Use...', '*')
+#3 /var/www/blog/lib/Cake/Controller/Component/Auth/ActionsAuthorize.php(38): AclComponent->check(Array, 'controllers/Use...')
+#4 /var/www/blog/lib/Cake/Controller/Component/AuthComponent.php(470): ActionsAuthorize->authorize(Array, Object(CakeRequest))
+#5 /var/www/blog/lib/Cake/Controller/Component/AuthComponent.php(311): AuthComponent->isAuthorized(Array)
+#6 [internal function]: AuthComponent->startup(Object(UsersController))
+#7 /var/www/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#8 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#9 /var/www/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/blog/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#12 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#13 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2018-09-13 17:48:22 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 3
+)
+"
+Request URL: /groups/delete/3
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php(90): AclNode->node(Array)
+#1 /var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php(137): AclBehavior->node(Object(Group), NULL, 'Aro')
+#2 [internal function]: AclBehavior->afterDelete(Object(Group))
+#3 /var/www/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/blog/lib/Cake/Model/Model.php(2731): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/blog/app/Controller/GroupsController.php(97): Model->delete()
+#8 [internal function]: GroupsController->delete('3')
+#9 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#10 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#12 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-09-13 17:49:17 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 2
+)
+"
+Request URL: /groups/delete/2
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php(90): AclNode->node(Array)
+#1 /var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php(137): AclBehavior->node(Object(Group), NULL, 'Aro')
+#2 [internal function]: AclBehavior->afterDelete(Object(Group))
+#3 /var/www/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/blog/lib/Cake/Model/Model.php(2731): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/blog/app/Controller/GroupsController.php(97): Model->delete()
+#8 [internal function]: GroupsController->delete('2')
+#9 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#10 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#12 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-09-13 17:49:28 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 1
+)
+"
+Request URL: /groups/delete/1
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php(90): AclNode->node(Array)
+#1 /var/www/blog/lib/Cake/Model/Behavior/AclBehavior.php(137): AclBehavior->node(Object(Group), NULL, 'Aro')
+#2 [internal function]: AclBehavior->afterDelete(Object(Group))
+#3 /var/www/blog/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#4 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#5 /var/www/blog/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/blog/lib/Cake/Model/Model.php(2731): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/blog/app/Controller/GroupsController.php(97): Model->delete()
+#8 [internal function]: GroupsController->delete('1')
+#9 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#10 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#12 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-09-13 17:49:33 Error: [NotFoundException] Invalid group
+Request URL: /groups/delete
+Stack Trace:
+#0 [internal function]: GroupsController->delete()
+#1 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GroupsController), Array)
+#2 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GroupsController), Object(CakeRequest))
+#4 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-09-13 18:14:06 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 1
+)
+"
+Request URL: /users/initDB
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Permission.php(222): AclNode->node(Object(Group))
+#1 /var/www/blog/lib/Cake/Model/Permission.php(174): Permission->getAclLink(Object(Group), 'controllers')
+#2 /var/www/blog/lib/Cake/Controller/Component/Acl/DbAcl.php(87): Permission->allow(Object(Group), 'controllers', '*', 1)
+#3 /var/www/blog/lib/Cake/Controller/Component/AclComponent.php(123): DbAcl->allow(Object(Group), 'controllers', '*')
+#4 /var/www/blog/app/Controller/UsersController.php(148): AclComponent->allow(Object(Group), 'controllers')
+#5 [internal function]: UsersController->initDB()
+#6 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-09-13 18:19:27 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 1
+)
+"
+Request URL: /users/initDB
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Permission.php(222): AclNode->node(Object(Group))
+#1 /var/www/blog/lib/Cake/Model/Permission.php(174): Permission->getAclLink(Object(Group), 'controllers')
+#2 /var/www/blog/lib/Cake/Controller/Component/Acl/DbAcl.php(87): Permission->allow(Object(Group), 'controllers', '*', 1)
+#3 /var/www/blog/lib/Cake/Controller/Component/AclComponent.php(123): DbAcl->allow(Object(Group), 'controllers', '*')
+#4 /var/www/blog/app/Controller/UsersController.php(148): AclComponent->allow(Object(Group), 'controllers')
+#5 [internal function]: UsersController->initDB()
+#6 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-09-13 18:22:10 Error: [CakeException] AclNode::node() - Couldn't find Aro node identified by "Array
+(
+    [Aro0.model] => Group
+    [Aro0.foreign_key] => 1
+)
+"
+Request URL: /users/initDB
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Model/Permission.php(222): AclNode->node(Object(Group))
+#1 /var/www/blog/lib/Cake/Model/Permission.php(174): Permission->getAclLink(Object(Group), 'controllers')
+#2 /var/www/blog/lib/Cake/Controller/Component/Acl/DbAcl.php(87): Permission->allow(Object(Group), 'controllers', '*', 1)
+#3 /var/www/blog/lib/Cake/Controller/Component/AclComponent.php(123): DbAcl->allow(Object(Group), 'controllers', '*')
+#4 /var/www/blog/app/Controller/UsersController.php(147): AclComponent->allow(Object(Group), 'controllers')
+#5 [internal function]: UsersController->initDB()
+#6 /var/www/blog/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-09-13 18:26:57 Error: [MissingActionException] Action JqtestController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'JqtestController',
+  'action' => 'add',
+)
+Request URL: /jqtest/add
+Stack Trace:
+#0 /var/www/blog/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/blog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(JqtestController), Object(CakeRequest))
+#2 /var/www/blog/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

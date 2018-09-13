@@ -37,33 +37,32 @@
 		<!-- 検索フォームを作成 -->	
 		<div class="col-md-12">
 			<div class="search">
-				<div class="box">
-					<div class="posts index">
-						<div class="well well-sm"> 
-							<div class="form-inline">
-								<?php echo $this->Form->create('Post', array(
-								'url' =>  array_merge(array('action' => 'index'),
-								$this->params['pass']),
-								)); ?>
-								<div class="form-group">
-									<?php echo $this->Form->label('title'); ?>
-									<?php echo $this->Form->text('title'); ?>
-								</div>
-								<div class="form-group">
-							<!--		<?php echo $this->Form->input('categoryname',array('type'=>'select','options'=>$list,'label'=>'Category')); ?>
-									<?php print var_export($list,true); ?> -->
-									<?php echo $this->Form->label('Category'); ?>
-									<?php echo $this->Form->text('categoryname'); ?> 
-								</div>
-								<div class="form-group">
-									<?php echo $this->Form->label('tag'); ?>
-									<?php echo $this->Form->text('tagname'); ?>
-								</div>
-								<div class="form-group">			
-									<?php echo $this->Form->submit(__('Search', true), array('div' => false)); ?>
-								</div>
-								<?php echo $this->Form->end();?>
+				<div class="posts index box">
+					<div class="well well-sm"> 
+						<div class="form-inline">
+							<?php echo $this->Form->create('Post', array(
+							'url' =>  array_merge(array('action' => 'index'),
+							$this->params['pass']),'inputDefaults'=>array('class'=>'form-control')
+							)); ?>
+							<div class="form-group">
+								<?php echo $this->Form->label('title'); ?>
+								<?php echo $this->Form->text('title'); ?>
 							</div>
+							<div class="form-group">
+								<?php echo $this->Form->input('categoryname',array('type'=>'select','options'=>$list,'label'=>'Category','empty'=>'','selected'=>'')); ?>
+								<!--	<?php print var_export($list,true); ?> 
+									<?php echo $this->Form->label('Category'); ?> 
+									<?php echo $this->Form->text('categoryname'); ?> -->
+							</div>
+							<div class="form-group">
+								<?php echo $this->Form->input('tagname',array('type'=>'select','options'=>$tags,'label'=>'Tag','empty'=>'','selected'=>'')); ?>
+								<!--		<?php echo $this->Form->label('tag'); ?>
+									<?php echo $this->Form->text('tagname'); ?> -->
+							</div>
+							<div class="form-group">			
+								<?php echo $this->Form->submit(__('Search', true), array('div' => false)); ?>
+							</div>
+							<?php echo $this->Form->end();?>
 						</div>
 					</div>
 				</div>

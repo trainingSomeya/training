@@ -35,6 +35,12 @@ th {
 td {
 	font-size: 16px;
 }
+tbody tr:nth-child(odd) {
+	background: #eee;
+}
+thead {
+	background: #8de;
+}
 dt {
 	font-size: 24px;
 }
@@ -43,6 +49,11 @@ dd {
 }
 legend {
 font-size:64px;
+}
+#flashMessage{
+font-size:16px;
+background: #8cc;
+text-align:center;
 }
 .form-group{
 font-size: 18px
@@ -96,7 +107,6 @@ font-size: 18px
 }
 .footer{
 	border-top: 1px solid black;
-	position:absolute;
 }
 .footer > .container{
 	padding-bottom: 30px;

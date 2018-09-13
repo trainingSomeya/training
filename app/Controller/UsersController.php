@@ -137,23 +137,22 @@ class UsersController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('initDB');
-		$this->Auth->allow('search');
+	//	$this->Auth->allow('initDB');
 	}
-	public function initDB() {
+	/*public function initDB() {
 		$group = $this->User->Group;
 		//管理者グループには全てを許可する
-		$group->id = 1;
+		$group->id = 4;
 		$this->Acl->allow($group, 'controllers');
 
 		//マネージャグループには posts と widgets に対するアクセスを許可する
-		$group->id = 2;
+		$group->id = 5;
 		$this->Acl->deny($group, 'controllers');
 		$this->Acl->allow($group, 'controllers/Posts');
 		$this->Acl->allow($group, 'controllers/Widgets');
 
 		//ユーザグループには posts と widgets に対する追加と編集を許可する
-		$group->id = 3;
+		$group->id = 6;
 		$this->Acl->deny($group, 'controllers');
 		$this->Acl->allow($group, 'controllers/Posts/add');
 		$this->Acl->allow($group, 'controllers/Posts/edit');
@@ -162,7 +161,7 @@ class UsersController extends AppController {
 		//馬鹿げた「ビューが見つからない」というエラーメッセージを表示させないために exit を追加します
 		echo "all done";
 		exit;
-	}
+	}*/
 
 
 }

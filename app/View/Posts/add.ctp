@@ -20,18 +20,22 @@
 			</div>
 		</div>
 	</nav>
-
-	<div class="posts form">
-		<?php echo $this->Form->create('Post',array('type' => 'file')); ?>
-		<form>
-			<legend><?php echo __('Add Post', array('type' => 'file')); ?></legend>
-			<div class="form-group"><?php echo $this->Form->input('category_id',array('type'=>'select','options'=>$list)); ?></div>
-			<div class="form-group"><?php echo $this->Form->input('user_id'); ?></div>
-			<div class="form-group"><?php echo $this->Form->input('title');?></div>
-			<div class="form-group"><?php echo $this->Form->input('body');?></div>
-			<div class="form-group"><?php echo $this->Form->input('Image.0.Filename',array('type' => 'file',));	?></div>
-			<div class="form-group"><?php echo $this->Form->input('Tag',array('type'=>'select','options'=>$tag,'multiple' => true,'size' => 5)); ?></div>
-			<div class="form-group"><?php echo $this->Form->end(__('Submit')); ?></div>
-		</form>
+	<div class="row">
+		<div class="posts form box">
+			<?php echo $this->Form->create('Post',array('inputDefaults'=>array('div'=>'form-group','class'=>'form-control'),'type' => 'file')); ?>
+			<form>
+				<legend><?php echo __('Add Post', array('type' => 'file')); ?></legend>
+				<?php echo $this->Form->input('category_id',array('type'=>'select','options'=>$list)); ?>
+				<?php echo $this->Form->input('user_id',array('type'=>'select','options'=>$users)); ?>
+				<?php echo $this->Form->input('title');?> 
+				<?php echo $this->Form->input('body');?> 
+				<?php echo $this->Form->input('Image.0.Filename',array('type' => 'file','class'=>false));	?> 
+				<?php echo $this->Form->input('Tag',array('type'=>'select','options'=>$tag,'multiple' => 'checkbox','size' => 5,'class'=>'checkbox')); ?>
+				<div class="form-group">
+				<?php echo $this->Form->submit(__('Submit'),array('class'=>'btn btn-primary btn-lg')); ?>
+			</div>	
+			</form>
+			<?php echo $this->Form->end(); ?> 
+		</div>
 	</div>
 </div>
