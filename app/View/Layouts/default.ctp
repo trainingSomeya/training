@@ -95,6 +95,11 @@ font-size: 18px
 }
 .search{
 	display:none;
+	background-color:#eeeeee;
+	color:#000000;
+	border-radius:0;
+	padding:10px 20px 10px 20px;
+
 }
 /* グリットシステムの確認、調整*/
 .box{

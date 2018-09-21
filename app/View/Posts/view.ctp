@@ -26,15 +26,15 @@
 		</div>
 	</nav>
 
-<div class="row">
-                <div class="col-md-12" id="title">
-                        <div class="box">
-                                <h1>
-                                        <?php echo __('Post'); ?><br>
-                                </h1>
-                        </div>
-                </div>
-</div>
+	<div class="row">
+		<div class="col-md-12" id="title">
+			<div class="box">
+				<h1>
+					<?php echo __('Post'); ?><br>
+				</h1>
+			</div>
+		</div>
+	</div>
 
 	<div class="posts view">
 		<dl>

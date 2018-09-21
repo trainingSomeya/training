@@ -22,23 +22,8 @@
 				</ul>
 				<button type="button" class="btn btn-default navbar-btn navbar-right" id="search">Search</button>
 			</div>
-		</div>
-	</nav>
-
-	<!-- 各ブログの内容表示とインフォメーション　-->
-	<div class="row">
-		<div class="col-md-12" id="title">
-			<div class="box">
-				<h1>
-					<?php echo __('Posts'); ?><br>
-				</h1>
-			</div>
-		</div>
-		<!-- 検索フォームを作成 -->	
-		<div class="col-md-12">
+			<!-- 検索フォームを作成 -->	
 			<div class="search">
-				<div class="posts index box">
-					<div class="well well-sm"> 
 						<div class="form-inline">
 							<?php echo $this->Form->create('Post', array(
 							'url' =>  array_merge(array('action' => 'index'),
@@ -46,7 +31,7 @@
 							)); ?>
 							<div class="form-group">
 								<?php echo $this->Form->label('title'); ?>
-								<?php echo $this->Form->text('title'); ?>
+								<?php echo $this->Form->text('title',array("placeholder"=>"Search")); ?>
 							</div>
 							<div class="form-group">
 								<?php echo $this->Form->input('categoryname',array('type'=>'select','options'=>$list,'label'=>'Category','empty'=>'','selected'=>'')); ?>
@@ -65,9 +50,21 @@
 							<?php echo $this->Form->end();?>
 						</div>
 					</div>
-				</div>
-			</div>
+		</div>
+	</nav>
 
+
+	<!-- 各ブログの内容表示とインフォメーション　-->
+	<div class="row">
+		<div class="col-md-12" id="title">
+			<div class="box">
+				<h1>
+					<?php echo __('Posts'); ?><br>
+				</h1>
+			</div>
+		</div>
+		
+	</div>
 			<div class="row">
 				<!-- 各ブログの内容表示 -->
 				<div class="col-md-8">

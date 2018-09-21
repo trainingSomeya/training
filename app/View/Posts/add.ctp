@@ -22,7 +22,7 @@
 	</nav>
 	<div class="row">
 		<div class="posts form box">
-			<?php echo $this->Form->create('Post',array('inputDefaults'=>array('div'=>'form-group','class'=>'form-control'),'type' => 'file')); ?>
+			<?php echo $this->Form->create('Post',array('inputDefaults'=>array('div'=>'form-group','class'=>'form-control'),'type' => 'file', 'enctype' => 'multipart/form-data')); ?>
 			<form>
 				<legend><?php echo __('Add Post', array('type' => 'file')); ?></legend>
 				<?php echo $this->Form->input('category_id',array('type'=>'select','options'=>$list)); ?>
